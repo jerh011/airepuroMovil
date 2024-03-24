@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AirePuro.Views.Nav"
+             Title="Nav"
+             BackgroundColor="#E6F7FF">
+
+    <Grid BackgroundColor="#E6F7FF">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+
+
+
+        </Grid.ColumnDefinitions>
+
+
+        <ContentView Grid.Column="0" Grid.Row="0" Padding="0" Margin="40,40,10,10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <ContentView.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding IrMonitoreocommand}"/>
+            </ContentView.GestureRecognizers>
+            <StackLayout Orientation="Horizontal">
+                <Image x:Name="monitoreo" Source="monitoreo1.png"  BackgroundColor="Transparent"/>
+                <Label Text="Monitoreo" FontAttributes="Bold" FontSize="20" TextColor="#ff9000"/>
+            </StackLayout>
+        </ContentView>
+
+        <ContentView Grid.Column="0" Grid.Row="1" Padding="0" Margin="40,40,10,10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <ContentView.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding IrRegistrocommand}"/>
+            </ContentView.GestureRecognizers>
+            <StackLayout Orientation="Horizontal">
+                <Image x:Name="reigstro" Source="registro.png"  BackgroundColor="Transparent" />
+                <Label Text="Historial" FontAttributes="Bold" FontSize="20" TextColor="#ff9000"/>
+            </StackLayout>
+        </ContentView>
+
+
+        <ContentView Grid.Column="0" Grid.Row="2" Padding="0" Margin="40,40,10,10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <ContentView.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding IrConfcommand}"/>
+            </ContentView.GestureRecognizers>
+            <StackLayout Orientation="Horizontal">
+                <Image x:Name="configuracion" Source="configuraciones.png"  BackgroundColor="Transparent"/>
+                <Label Text="Configuraciones Ventiladores" FontAttributes="Bold" FontSize="20" TextColor="#ff9000"/>
+            </StackLayout>
+        </ContentView>
+
+        <ContentView Grid.Column="0" Grid.Row="3" Padding="0" Margin="40,40,10,10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <ContentView.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding IrConfSensorcommand}"/>
+            </ContentView.GestureRecognizers>
+            <StackLayout Orientation="Horizontal">
+                <Image x:Name="configuracionSensores" Source="configuraciones.png"  BackgroundColor="Transparent"/>
+                <Label Text="Configuraciones Sensores" FontAttributes="Bold" FontSize="20" TextColor="#ff9000"/>
+            </StackLayout>
+        </ContentView>
+
+        <ContentView Grid.Column="0" Grid.Row="7" Padding="0" Margin="40,40,10,10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <ContentView.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding IrCerrarSesiorcommand}"/>
+            </ContentView.GestureRecognizers>
+            <StackLayout Orientation="Horizontal">
+                <Image x:Name="cerrarsesior" Source="cerrarsesion.png"  BackgroundColor="Transparent"/>
+                <Label Text="Cerrar Sesión" FontAttributes="Bold" FontSize="20" TextColor="#ff9000"/>
+            </StackLayout>
+        </ContentView>
+
+    </Grid>
+</ContentPage>
+    
+    
+    
+    

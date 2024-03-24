@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AirePuro.Views.Pantalla.Login"
+                          BackgroundColor="#E6F7FF" 
+             NavigationPage.HasNavigationBar="False">
+
+
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="60">
+            <Frame CornerRadius="1000" 
+                   Margin="10,40,10,90" 
+                   WidthRequest="200"
+                   HeightRequest="200"
+                   Padding="0"
+                   HasShadow="False"
+                   BackgroundColor="Transparent">
+                <Image Source="airepuro.png" 
+                       Aspect="AspectFill"/>
+            </Frame>
+
+            <Label Text="Usuario"
+                   TextColor="Black" 
+                   FontSize="20"/>
+
+            <Entry Placeholder="Nombre de usuario"
+                   PlaceholderColor="#6699CC"
+                   BackgroundColor="Transparent"
+                   TextColor="#333333" 
+                   Margin="0,0,0,30" 
+                   Text="{Binding Campo1}"/>
+
+            <Label Text="Contraseña"
+                   TextColor="Black" 
+                   FontSize="20"
+                    Margin="0,0,0,0"/>
+            <Entry Placeholder="Contraseña" 
+                   PlaceholderColor="#6699CC"
+                   BackgroundColor="Transparent"
+                   TextColor="Black" 
+                   IsPassword="True"
+                   Margin="0,0,0,10" 
+                   Text="{Binding Campo2}" />
+
+            <Button x:Name="btnIniciarSesion" 
+                    Text="Iniciar Sesión" 
+                    BackgroundColor="#6699CC" 
+                    TextColor="White" 
+                    CornerRadius="20"
+                    HeightRequest="60"
+                    Margin="60,30,50,0"
+                    Clicked="btnIniciarSesion_Clicked" 
+                    Command="{Binding Iniciarcommand}" 
+                    IsEnabled="{Binding CamposRellenados}">
+            </Button>
+
+            <Label Text="¿Aún no tienes una cuenta?" 
+                   TextColor="Black"/>
+
+            <Label Text="Registrate aquí." 
+                   TextColor="#6699CC" 
+                   TranslationX="80" 
+                   TranslationY="-28" 
+                   HorizontalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Registrarcommand}"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

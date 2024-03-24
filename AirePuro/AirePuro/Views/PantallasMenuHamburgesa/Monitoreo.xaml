@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AirePuro.Views.PantallasMenuHamburgesa.Monitoreo"
+             Title="Monitoreo">
+    <StackLayout Padding="10" BackgroundColor="#E6F7FF">
+
+        <Grid>
+            <Frame CornerRadius="40"
+                   Grid.Row="0" Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Margin="10">
+                <StackLayout VerticalOptions="CenterAndExpand" 
+                             HorizontalOptions="CenterAndExpand">
+                    <Label Text="Calidad de aire"
+                           FontSize="Medium"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"/>
+                    <Image Source="gaz.png" 
+                           BackgroundColor="Transparent"
+                           HeightRequest="90" 
+                           WidthRequest="80" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding IrSensoresGascommand}"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </Frame>
+
+            <Frame CornerRadius="40"
+                   Grid.Row="0" Grid.Column="2"
+                   Grid.ColumnSpan="2"
+                   Margin="10">
+                <StackLayout VerticalOptions="CenterAndExpand" 
+                             HorizontalOptions="CenterAndExpand">
+                    <Label Text="Temperatura"
+                           FontSize="Medium" 
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"/>
+                    <Image Source="celsius.png"
+                           BackgroundColor="Transparent"
+                           HeightRequest="90" 
+                           WidthRequest="80" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding IrTemperaturacommand}"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </Frame>
+
+
+
+            <Frame CornerRadius="40"
+                   Grid.Row="1" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   Margin="10">
+                <StackLayout VerticalOptions="CenterAndExpand" 
+                             HorizontalOptions="CenterAndExpand">
+                    <Label Text="Ventilador"
+                           FontSize="Medium" 
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"/>
+                    <Image Source="velocimetro.png"
+                           BackgroundColor="Transparent" 
+                           HeightRequest="100" 
+                           WidthRequest="190"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding IrVentiladorescommand}"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </Frame>
+
+
+        </Grid>
+
+        <Frame Padding="10" BackgroundColor="Transparent" Margin="20">
+            <Button Text="Registrar componentes" 
+                    BackgroundColor="White" 
+                    CornerRadius="20" 
+                    Command="{Binding RegistrarSensorcommand}"/>
+        </Frame>
+    </StackLayout>
+</ContentPage>

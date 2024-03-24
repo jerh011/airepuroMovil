@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AirePuro.Views.PantallasMenuHamburgesa.Registro"
+             Title="Registro">
+    <Grid>
+        <ScrollView>
+            <StackLayout BackgroundColor="#E6F7FF">
+                <!--Aqui la vista de los registros -->
+                <Grid Margin="7" >
+                    <Frame Grid.Row="0" WidthRequest="350"
+                                HorizontalOptions="Center"
+                                CornerRadius="15"
+                                Margin="0,0,0,0"
+                                BorderColor="#ADF7B6"
+                                BackgroundColor="#FFC09F">
+                        <StackLayout Margin="0,30,0,0">
+                            <Grid>
+                                <Label Text="Ubicacion: Sala" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0" FontAttributes="Bold,Italic" FontSize="20"/>
+
+                                <Label Text="Ver más"
+                                HorizontalOptions="Center"
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                FontAttributes="Bold,Italic"
+                                FontSize="20"
+                                TextColor="Blue"
+                                >
+                                    <!-- Aquí establecemos el Binding del evento Tapped al comando VerMasLabelCommand del ViewModel -->
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding VerMasLabelTappedcommand}" CommandParameter="{Binding .}" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Grid.Row="1" WidthRequest="350"
+                                HorizontalOptions="Center"
+                                CornerRadius="15"
+                                Margin="0,0,0,0"
+                                BorderColor="#ADF7B6"
+                                BackgroundColor="#FFC09F">
+                        <StackLayout Margin="0,30,0,0">
+                            <Grid>
+                                <Label Text="Ubicacion: Sala" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0" FontAttributes="Bold,Italic" FontSize="20"/>
+
+                                <Label Text="Ver más"
+                                HorizontalOptions="Center"
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                FontAttributes="Bold,Italic"
+                                FontSize="20"
+                                TextColor="Blue">
+                                    <!-- Aquí establecemos el Binding del evento Tapped al comando VerMasLabelCommand del ViewModel -->
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding VerMasLabelTapped2command}" CommandParameter="{Binding .}" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+
+    </Grid>
+</ContentPage>

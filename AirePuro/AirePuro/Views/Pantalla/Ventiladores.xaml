@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AirePuro.Views.Pantalla.Ventiladores"
+             Title="Ventiladores">
+    <StackLayout>
+        <ScrollView>
+            <Grid RowDefinitions="0,*" Padding="0,0,0,140">
+
+
+                <CollectionView  x:Name="Listado" Grid.Row="1" ItemsSource="{Binding Lista}" Margin="0,-9,0,-120">
+
+                    <CollectionView.ItemsLayout>
+
+                        <GridItemsLayout Orientation="Vertical" Span="1" HorizontalItemSpacing="10" VerticalItemSpacing="10" />
+
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.ItemTemplate>
+
+                        <DataTemplate>
+
+                            <Grid RowDefinitions="100, *" Margin="10,10,0,0">
+
+                                <Frame Grid.Row="1" WidthRequest="400" HeightRequest="120" HorizontalOptions="Center" CornerRadius="15" Margin="0,-80,10,0" 
+                               BackgroundColor="#5db6e7" HasShadow="False">
+
+                                    <Grid>
+
+                                        <StackLayout Grid.Row="0" Grid.Column="0"  Grid.RowSpan="2">
+
+                                            <Image Source="velocimetro.png" />
+
+                                        </StackLayout>
+
+                                        <StackLayout Grid.Row="0" Grid.Column="1"  Grid.ColumnSpan="2">
+                                            <Grid>
+                                                <Label FontSize="18" TextColor="Black" Text="Habitacion:" Margin="0,0" Grid.Row="0" Grid.Column="0"/>
+                                                <Label FontSize="18" TextColor="Black" Text="{Binding ubicacion}" Margin="0,0"  Grid.Row="0" Grid.Column="1"/>
+                                            </Grid>
+                                        </StackLayout>
+
+                                        <StackLayout Grid.Row="1" Grid.Column="1"  Grid.ColumnSpan="2">
+                                            <Grid>
+                                                <Label FontSize="18" TextColor="Black" Text="RPM:" Margin="0,0" Grid.Row="0" Grid.Column="0"/>
+                                                <Label FontSize="18" TextColor="Black" Text="{Binding rpm}" Margin="0,0" Grid.Row="0" Grid.Column="1"/>
+                                            </Grid>
+                                        </StackLayout>
+
+                                        <StackLayout Grid.Row="2" Grid.Column="1"  Grid.ColumnSpan="2">
+
+                                            <Switch>
+                                                <Switch.Triggers>
+                                                    <DataTrigger TargetType="Switch" Binding="{Binding encendido}" Value="true">
+                                                        <Setter Property="IsToggled" Value="True" />
+                                                    </DataTrigger>
+                                                </Switch.Triggers>
+                                            </Switch>
+                                        </StackLayout>
+
+
+                                    </Grid>
+
+
+                                </Frame>
+
+
+
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.IraEditarcommand,Source={x:Reference Listado}}" CommandParameter="{Binding .}"/>
+                                </Grid.GestureRecognizers>
+                            </Grid>
+
+                        </DataTemplate>
+
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+
+
+
+            </Grid>
+
+        </ScrollView>
+        <StackLayout Padding="0,-10,0,0" Margin="0,-15,0,0" BackgroundColor="Transparent">
+            <Label Text="Hecho por JERH" BackgroundColor="Transparent"/>
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AirePuro.Views.PantallasMenuHamburgesa.configuracionSensores"
+             Title="Configuracion Sensores">
+
+    <ScrollView>
+        <StackLayout BackgroundColor="#E6F7FF">
+            <Frame BackgroundColor="#E6F7FF" 
+                   BorderColor="Transparent" 
+                   Margin="0.5">
+            </Frame>
+            <Frame BorderColor="Transparent"
+                   Margin="10"
+                   CornerRadius="20">
+                <Grid>
+                    <Label Grid.Row="0"
+                           Grid.Column="1" 
+                           Text="Tipo de grado de temperatura:"
+                           FontSize="18"
+                           HorizontalOptions="Center" 
+                           TextColor="Black" 
+                           FontAttributes="Bold" 
+                           Margin="-30,-5,-30,5"/>
+                    <Button Text="Fahrenheit" 
+                            FontSize="15" 
+                            BackgroundColor="{Binding ActivoTipoTemperaturaFarenheit}" 
+                            Grid.Column="0" 
+                            FontAttributes="Bold"
+                            Grid.Row="1"
+                            CornerRadius="10" 
+                            BorderWidth="3" 
+                            HeightRequest="25"
+                            WidthRequest="15" 
+                            Margin="0,0,0,0" Command="{Binding TipoActivoFARENHEITcommand}"/>
+                    <Button Text="Celcius"
+                            FontAttributes="Bold"
+                            FontSize="15" 
+                            BackgroundColor="{Binding ActivoTipoTemperaturaCelcius}" 
+                            Grid.Column="2"
+                            Grid.Row="1" 
+                            CornerRadius="10"
+                            BorderWidth="3"
+                            HeightRequest="25"
+                            WidthRequest="15" 
+                            Margin="0,0,0,0" Command="{Binding TipoActivoCelciuscommand}"/>
+                </Grid>
+            </Frame>
+            <Frame BorderColor="Transparent" 
+                   Margin="10"
+                   CornerRadius="20">
+                <Grid>
+                    <Label Grid.Row="0" 
+                           Grid.Column="1" 
+                           Text="Horario de Sensado de Temperatura:"
+                           FontSize="18" 
+                           HorizontalOptions="Center" 
+                           TextColor="Black" 
+                           FontAttributes="Bold" 
+                           Margin="-30,-5,-30,5"/>
+                    <Button Text="(7-10 hrs)" 
+                            FontSize="18" 
+                            BackgroundColor="{Binding HorarioActivoTemperatura_7_10Hrs}" 
+                            Grid.Column="0" 
+                            Grid.Row="1"
+                            CornerRadius="10" 
+                            BorderWidth="3"
+                            FontAttributes="Bold"
+                            HeightRequest="25"
+                            WidthRequest="20" 
+                            Margin="0,0,0,0" Command="{Binding Horario7_10Hrscommand}"/>
+                    <Button Text="(24 hrs)" 
+                            FontSize="18" 
+                            BackgroundColor="{Binding HorarioActivoTemperatura_24Hrs}" 
+                            Grid.Column="2"
+                            FontAttributes="Bold"
+                            Grid.Row="1" 
+                            CornerRadius="10" 
+                            BorderWidth="3" 
+                            HeightRequest="25"
+                            WidthRequest="20" 
+                            Margin="0,0,0,0"
+                            Command="{Binding Horario24Hrscommand}"/>
+                </Grid>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

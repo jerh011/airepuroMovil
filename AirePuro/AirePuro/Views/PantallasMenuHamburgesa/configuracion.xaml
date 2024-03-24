@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AirePuro.Views.PantallasMenuHamburgesa.configuracion"
+             xmlns:local="clr-namespace:AirePuro.Trigger"
+             Title="Configuración Ventiladores">
+    <ScrollView>
+        <StackLayout BackgroundColor="#E6F7FF">
+
+
+            <Frame CornerRadius="20"
+                   Margin="10,40,10,10">
+                <Grid>
+                    <Label Grid.Row="0" 
+                           Grid.Column="0" 
+                           Text="VENTILADOR AUTOMATICO"
+                           FontSize="18" 
+                           TextColor="Black"
+                           FontAttributes="Bold"/>
+                    <Button x:Name="MiBoton"
+                            Text="ON/OFF" 
+                            FontSize="13"
+                            BackgroundColor="#bae0f5"
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            CornerRadius="10"
+                            BorderWidth="3"
+                            BorderColor="CornflowerBlue" 
+                            HeightRequest="5"
+                            WidthRequest="5" 
+                            Margin="40,0,0,0" 
+                            Command="{Binding VentiladorAutomaticoCommand}"
+                            CommandParameter="{x:Reference MiBoton}"/>
+                </Grid>
+            </Frame>
+            <Grid>
+                <Frame CornerRadius="20"
+                       Margin="10,0,10,0">
+                    <Grid>
+                        <Label Grid.Row="0" 
+                               Margin="-150,0,-150,-200"
+                               Grid.Column="1" 
+                               Text="Horas de funcionamiento por dia del ventilador"
+                               FontSize="18" 
+                               FontAttributes="Bold"/>
+                        <ImageButton Source="flehaarriba1.png" 
+                                     BackgroundColor="#bae0f5" 
+                                     Grid.Column="0"
+                                     Padding="10"
+                                     Grid.Row="2" 
+                                     CornerRadius="10" 
+                                     BorderWidth="3" 
+                                     BorderColor="CornflowerBlue" 
+                                     HeightRequest="5"
+                                     WidthRequest="5" 
+                                     Margin="0,-20,0,20"
+                                     Command="{Binding IncrementoHorascommand}">
+                            <ImageButton.Triggers>
+                                <EventTrigger Event="Clicked">
+                                    <local:Configuracion/>
+                                </EventTrigger>
+                            </ImageButton.Triggers>
+                        </ImageButton>
+                        <Label Text="Horas:"
+                               TextColor="#ffaf11"
+                               Margin="0,0,0,-20"
+                               FontSize="20" 
+                               HorizontalOptions="Center"
+                               Grid.Column="1"
+                               Grid.Row="1"/>
+                        <ImageButton Source="flechaabjo2.png" 
+                                    BackgroundColor="#bae0f5" 
+                                    Grid.Column="2"
+                                    Grid.Row="2" 
+                                    Padding="6"
+                                    CornerRadius="10" 
+                                    BorderWidth="3" 
+                                    BorderColor="CornflowerBlue" 
+                                    HeightRequest="5" 
+                                    WidthRequest="5" 
+                                    Margin="0,-20,0,20"
+                                    Command="{Binding QuitaHorascommand}">
+                            <ImageButton.Triggers>
+                                <EventTrigger Event="Clicked">
+                                    <local:Configuracion/>
+                                </EventTrigger>
+                            </ImageButton.Triggers>
+                        </ImageButton>
+                        <Frame BorderColor="Black"
+                               BackgroundColor="Gray"
+                               Margin="0,-20,0,20"
+                               Grid.Column="1" 
+                               Grid.Row="2"
+                               HeightRequest="30"
+                               WidthRequest="50">
+                            <Label Text="{Binding HorasVentilador}" 
+                                   Margin="5" 
+                                   TextColor="#fff"
+                                   FontSize="15" 
+                                   HorizontalOptions="CenterAndExpand"/>
+                        </Frame>
+                    </Grid>
+                </Frame>
+            </Grid>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,1 @@
+<network-security-config><domain-config cleartextTrafficPermitted="true"><domain includeSubdomains="true">1p9p726s-5031.usw3.devtunnels.ms/</domain><domain includeSubdomains="true">1p9p726s-5031.usw3.devtunnels.ms</domain><domain includeSubdomains="true">www.localhost:3000</domain></domain-config></network-security-config>
