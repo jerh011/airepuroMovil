@@ -14,7 +14,7 @@ namespace AirePuro.ViewModel
     {
         #region variables
         public List<MSenTemp> _SensoresVentiladores;
-
+        SenTepsim _SenTep = SenTepsim.Instancia;
         #endregion
 
         public VMSensorTemp(INavigation naivigation)
@@ -42,8 +42,8 @@ namespace AirePuro.ViewModel
 
         public async Task ListarSenTemp()
         {
-            var _SenTep = SenTepsim.Instancia;//BORRAR
-            Lista = _SenTep.ObtenerAreglo();
+            
+            Lista = await _SenTep.ObtenerAreglo();
         }
 
 

@@ -18,19 +18,24 @@ namespace AirePuro.ViewModel
         public List<DPikerListado> _ListaSensores { get; set; }
         public List<PinesEncendido> _PinesEncendido { get; set; }
         public List<PinesRPM> _PinesRPM { get; set; }
-        
+        public List<PindatosTemp> _PineTemp { get; set; }
+
         public string _ID;
         public string _Habitacion;
 
         private DPikerListado _selectedSensor = new DPikerListado();
         private PinesEncendido _selectedEncendido = new PinesEncendido();
         private PinesRPM _selectedRPM = new PinesRPM();
+        private PindatosTemp _selectedTemp = new PindatosTemp();
+
 
         public Ventiladoressim _VENTILADORES = Ventiladoressim.Instancia;
         public SenGazSim _SensorGaz = SenGazSim.Instancia;
         public SenTepsim _SensorTemperatura = SenTepsim.Instancia;
         private Random random = new Random();
         private List<MVentilador> listaVenti;
+        private List<MSenTemp> listaTemperatura;
+        private List<MSenGaz> listaGaz;
 
         #endregion
         public VMRegistrarSensores(INavigation naivigation)
@@ -39,6 +44,14 @@ namespace AirePuro.ViewModel
             _ListaSensores = GetLista();
             _PinesEncendido = GetPinesEncendido();
             _PinesRPM = GetPinesRPM();
+            _PineTemp=GetPinesDatosTemp();
+            Task.Run(async () =>
+            {
+                listaTemperatura = await _SensorTemperatura.ObtenerAreglo();
+                // Filtrar los pines de encendido y RPM para que no se muestren en el DataPicker
+                _PineTemp = _PineTemp.Where(p => !listaTemperatura.Any(v => v.PinDatos == p.pinTemp)).ToList();
+            }).Wait(); ;
+
             Task.Run(async () =>
             {
                 listaVenti = await _VENTILADORES.ObtenerAreglo();
@@ -46,6 +59,7 @@ namespace AirePuro.ViewModel
                 _PinesEncendido = _PinesEncendido.Where(p => !listaVenti.Any(v => v.pinEnsendido == p.pinEnsendido)).ToList();
                 _PinesRPM = _PinesRPM.Where(p => !listaVenti.Any(v => v.pinRPM == p.pinRPM)).ToList();
             }).Wait();
+
 
         }
 
@@ -79,7 +93,6 @@ namespace AirePuro.ViewModel
                 new PinesRPM(){Key= 2,pinRPM="23" },
                 new PinesRPM(){Key= 3,pinRPM="18" },
                 new PinesRPM(){Key= 3,pinRPM="19" }
-
             };
         }
         public List<PinesEncendido> GetPinesEncendido()
@@ -93,7 +106,18 @@ namespace AirePuro.ViewModel
             };
         }
 
-        public DPikerListado SelectedSensor
+        public List<PindatosTemp> GetPinesDatosTemp()
+        {
+            return new List<PindatosTemp>()
+            {
+                new PindatosTemp(){Key= 1,pinTemp="4" },
+                new PindatosTemp(){Key= 2,pinTemp="2" },
+                new PindatosTemp(){Key= 3,pinTemp="15" },
+                new PindatosTemp(){Key= 4,pinTemp="13" }
+            };
+        }
+
+        public DPikerListado SelectedModulo
         {
             get { return _selectedSensor; }
             set { SetValue(ref _selectedSensor, value); }
@@ -103,6 +127,11 @@ namespace AirePuro.ViewModel
         {
             get { return _selectedRPM; }
             set { SetValue(ref _selectedRPM, value); }
+        }
+        public PindatosTemp SelectTemp
+        {
+            get { return _selectedTemp; }
+            set { SetValue(ref _selectedTemp, value); }
         }
 
         public PinesEncendido SelectedEncendido
@@ -116,21 +145,18 @@ namespace AirePuro.ViewModel
             try
             {
             
-                switch (SelectedSensor.Value)
+                switch (SelectedModulo.Value)
                 {
                     case "Ventilador":
                         {
-
-
                             if (listaVenti.Any(v => v.pinRPM == SelectedRPM.pinRPM || v.pinEnsendido == SelectedEncendido.pinEnsendido))
                             {
                                 if (listaVenti.Any(v2 => v2.pinRPM == SelectedRPM.pinRPM))
                                     await DisplayAlert("Advertencia", $"El puerto de rpm {SelectedRPM.pinRPM} ya esta en uso.", "Aceptar");
-                                else
+                                else 
                                     await DisplayAlert("Advertencia", $"El puerto de ensendido {SelectedEncendido.pinEnsendido} ya esta en uso.", "Aceptar");
                                 return;
                             }
-
                             MVentilador ventilador = new MVentilador();
                             ventilador.id = ID;
                             ventilador.ubicacion = Habitacion;
@@ -138,15 +164,16 @@ namespace AirePuro.ViewModel
                             ventilador.encendido = true;
                             ventilador.pinEnsendido = SelectedEncendido.pinEnsendido;
                             ventilador.pinRPM = SelectedRPM.pinRPM;
-                            if (ventilador.pinRPM != null || ventilador.pinEnsendido != null)
+                            if (ventilador.pinRPM != null && ventilador.pinEnsendido != null && Habitacion!=null)
                             {
                                 if (await _VENTILADORES.Insertar(ventilador))
-                                    await DisplayAlert("Registro", $"Se registro el componente {SelectedSensor.Value}", "Aceptar");
-                              
+                                {
+                                    await DisplayAlert("Registro", $"Se registro el componente {SelectedModulo.Value}", "Aceptar");
+                                    await Volver();
+                                }
                             }
                             else
-                                await DisplayAlert("Registro", "seleccione un puerto", "Aceptar");
-
+                                await DisplayAlert("Registro", "seleccione un puerto o seleccione habitacion", "Aceptar");
                             break;
                         }
                     case "Gaz":
@@ -159,7 +186,8 @@ namespace AirePuro.ViewModel
 
                             if (await _SensorGaz.Insertar(_senGaz))
                             {
-                                DisplayAlert("Registro", $"Se registro el sensor de {SelectedSensor.Value}", "Aceptar");
+                                DisplayAlert("Registro", $"Se registro el sensor de {SelectedModulo.Value}", "Aceptar");
+                                await Volver();
                             }
                             else
                                 DisplayAlert("Registro", "Registro fallido ser alcanzo el limite de resgistos de 10", "Aceptar");
@@ -171,21 +199,27 @@ namespace AirePuro.ViewModel
                             _senTemp.ID = ID;
                             _senTemp.Habitacion = Habitacion;
                             _senTemp.Humedad = (random.Next(10, 60)).ToString();//cambiar a 0
+                            _senTemp.PinDatos = SelectTemp.pinTemp;
                             _senTemp.Temp = (random.Next(-19, 41)).ToString();
-
-                            if (_SensorTemperatura.Insertar(_senTemp))
+                            if (_senTemp.PinDatos != null && Habitacion != null)
                             {
-                                DisplayAlert("Registro", $"Se registro el sensor de {SelectedSensor.Value}", "Aceptar");
+                                if (_SensorTemperatura.Insertar(_senTemp))
+                                {
+                                    DisplayAlert("Registro", $"Se registro el sensor de {SelectedModulo.Value}", "Aceptar");
+                                    await Volver();
+                                }
+                                else
+                                    DisplayAlert("Registro", "Registro fallido ser alcanzo el limite de resgistos de 10", "Aceptar");
                             }
                             else
-                                DisplayAlert("Registro", "Registro fallido ser alcanzo el limite de resgistos de 10", "Aceptar");
+                                await DisplayAlert("Registro", "seleccione un puerto o seleccione habitacion", "Aceptar");
                         }
                         break;
 
 
                     default:
-                        await DisplayAlert("Error inesperado", $"¿Qué seleccionaste?", "Aceptar");
-                        break;
+                        await DisplayAlert("Error inesperado", $"¿Qué seleccionaste?", "Ok?");
+                    break;
                 }
                
             }
@@ -194,7 +228,7 @@ namespace AirePuro.ViewModel
               
                 await DisplayAlert("Error", $"Se produjo un error: {ex.Message}", "Aceptar");
             }
-            await Volver();
+           
         }
 
 

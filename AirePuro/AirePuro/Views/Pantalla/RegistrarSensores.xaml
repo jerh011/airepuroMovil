@@ -9,12 +9,7 @@
         <StackLayout Grid.Row="1" Margin="10">
             <!--ID-->
             <StackLayout Orientation="Horizontal">
-                <Label Text="ID: "
-                       TextColor="White" 
-                       FontAttributes="Bold"
-                       VerticalOptions="Center"
-                       FontSize="18"/>
-
+              
                 <Entry Placeholder="ID" 
                        FontAttributes="Bold" 
                        TextColor="#ffeb72"
@@ -22,6 +17,7 @@
                        TextTransform="Lowercase"
                        HorizontalOptions="StartAndExpand"
                        Text="{Binding ID}"
+                       IsVisible="false"
                        />
             </StackLayout>
 
@@ -58,13 +54,16 @@
                         TextColor="#ffeb72"
                         ItemsSource="{Binding _ListaSensores}"
                         ItemDisplayBinding="{Binding Value}"
-                        SelectedItem="{Binding SelectedSensor, Mode=TwoWay}"
-                        HorizontalOptions="StartAndExpand"/>
+                        SelectedItem="{Binding SelectedModulo, Mode=TwoWay}"
+                        HorizontalOptions="StartAndExpand">
+
+                </Picker>
             </StackLayout>
 
             <!--  rpm -->
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Pin RPM: "
+            <StackLayout Orientation="Horizontal" IsVisible="False">
+              
+                    <Label Text="Pin RPM: "
                        TextColor="White" 
                        FontAttributes="Bold"
                        VerticalOptions="Center"
@@ -77,11 +76,21 @@
                         ItemsSource="{Binding _PinesRPM}"
                         ItemDisplayBinding="{Binding pinRPM}"
                         SelectedItem="{Binding SelectedRPM, Mode=TwoWay}"
-                        HorizontalOptions="StartAndExpand"/>  
+                        HorizontalOptions="StartAndExpand"
+                        />
+                
+                <StackLayout.Triggers>
+                    <DataTrigger TargetType="StackLayout" Binding="{Binding SelectedModulo.Value}" Value="Ventilador">
+                      
+                        <Setter Property="IsVisible" Value="True" />
+                       
+                    </DataTrigger >
+                </StackLayout.Triggers>
             </StackLayout>
 
+            
             <!--  ENCENDIDO -->
-            <StackLayout Orientation="Horizontal">
+            <StackLayout Orientation="Horizontal" IsVisible="False">
                 <Label Text="Pin de ENCENDIDO: "
                        TextColor="White" 
                        FontAttributes="Bold"
@@ -96,9 +105,43 @@
                         ItemDisplayBinding="{Binding pinEnsendido}"
                         SelectedItem="{Binding SelectedEncendido, Mode=TwoWay}"
                         HorizontalOptions="StartAndExpand"/>
-                
+                <StackLayout.Triggers>
+                    <DataTrigger TargetType="StackLayout" Binding="{Binding SelectedModulo.Value}" Value="Ventilador">
+
+                        <Setter Property="IsVisible" Value="True" />
+
+                    </DataTrigger >
+                </StackLayout.Triggers>
+
             </StackLayout>
 
+            <!--  Pin Datos Temperatura -->
+            <StackLayout Orientation="Horizontal" IsVisible="False">
+
+                <Label Text="Pin Temp/Humedad: "
+                       TextColor="White" 
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       FontSize="18"/>
+
+                <Picker x:Name="PinDatosTemp"
+                        Title="Selecciona un sensor"
+                        FontAttributes="Bold"
+                        TextColor="#ffeb72"
+                        ItemsSource="{Binding _PineTemp}"
+                        ItemDisplayBinding="{Binding pinTemp}"
+                        SelectedItem="{Binding SelectTemp, Mode=TwoWay}"
+                        HorizontalOptions="StartAndExpand"
+                 />
+
+                <StackLayout.Triggers>
+                    <DataTrigger TargetType="StackLayout" Binding="{Binding SelectedModulo.Value}" Value="Temperatura">
+
+                        <Setter Property="IsVisible" Value="True" />
+
+                    </DataTrigger >
+                </StackLayout.Triggers>
+            </StackLayout>
 
             <!--Btn-->
             <Frame HorizontalOptions="Center"

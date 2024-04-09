@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace AirePuro.Simulacion
 {
@@ -65,7 +66,7 @@ namespace AirePuro.Simulacion
             return false;
         }
 
-        public List<MSenTemp> ObtenerAreglo()
+        public async Task<List<MSenTemp>> ObtenerAreglo()
         {
 
             return listaTemp;

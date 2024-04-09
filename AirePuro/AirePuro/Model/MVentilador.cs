@@ -7,12 +7,12 @@ namespace AirePuro.Model
     public class MVentilador
     {
      
-        public string id { get; set; } = string.Empty;
+        public string id { get; set; }
 
 
         public int rpm { get; set; }
 
-        public string ubicacion { get; set; } = string.Empty;
+        public string ubicacion { get; set; }
     
         public bool encendido { get; set; }
 

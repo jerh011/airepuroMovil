@@ -35,11 +35,7 @@ namespace AirePuro.Simulacion
         {
                 try
                 {
-                    
-                    // Si no existe, agregar el ventilador a la lista
-                    listaVenti.Add(_ventilador);
-
-                    // Lógica para insertar en el servidor
+                    _ventilador.id = "1";
                     var json = JsonConvert.SerializeObject(_ventilador);
                     var contentJson = new StringContent(json, Encoding.UTF8, "application/json");
                     var response = await client.PostAsync(api_url, contentJson);
@@ -50,8 +46,7 @@ namespace AirePuro.Simulacion
                 }
                 catch (Exception ex)
                 {
-                    // Manejo de errores aquí
-                    Console.WriteLine($"Error al insertar ventilador: {ex.Message}");
+                    
                     return false;
                 }
         }
@@ -70,15 +65,12 @@ namespace AirePuro.Simulacion
                     listaVenti = JsonConvert.DeserializeObject<List<MVentilador>>(Ventilor);
 
                 }
-                else
-                {
-                    // Console.WriteLine("Error al realizar la petición HTTP");
-                   
-                }
+               
+                
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+               Console.WriteLine($"Error: {ex.Message}");
             }
 
             Console.WriteLine(Ventilor);
