@@ -18,7 +18,7 @@ namespace AirePuro.ViewModel.EditarModulo
         #region variables
         public List<DPikerListado> _ListaSensores { get; set; }
         public List<PindatosTemp> _PindatosTemp { get; set; }
-  
+        
         private List<MSenTemp> listaTemperatura;
 
         public string _ElimnacionComponente;
@@ -26,7 +26,7 @@ namespace AirePuro.ViewModel.EditarModulo
         public string _Habitacion;
         public string _PinDatos;
         public string _Humedad;
-        public string _Tempertatura;
+        public int _Tempertatura;
 
         private DPikerListado _selectedSensor = new DPikerListado();
         private PindatosTemp _selectedPindatosTemp = new PindatosTemp();
@@ -49,7 +49,7 @@ namespace AirePuro.ViewModel.EditarModulo
             Habitacion = _Modulo.ubicacion;
             Temperatura = _Modulo.temperatura;
             Humedad=_Modulo.humedad;
-            PinDatos=_Modulo.PinDatos;
+            PinDatos=_Modulo.pinDatos;
             SelectedSensor = _ListaSensores.FirstOrDefault(s => s.Value == "Temperatura");
 
             _PindatosTemp = GetPinesDatosTemp();
@@ -57,7 +57,7 @@ namespace AirePuro.ViewModel.EditarModulo
             Task.Run(async () =>
             {
                 listaTemperatura = await _Sentemperatura.ObtenerAreglo();
-                _PindatosTemp = _PindatosTemp.Where(p => !listaTemperatura.Any(v => v.PinDatos == p.pinTemp)).ToList();
+                _PindatosTemp = _PindatosTemp.Where(p => !listaTemperatura.Any(v => v.pinDatos == p.pinTemp)).ToList();
             }).Wait();
         }
         #endregion
@@ -73,7 +73,7 @@ namespace AirePuro.ViewModel.EditarModulo
             get { return _Habitacion; }
             set { SetValue(ref _Habitacion, value); }
         }
-        public string Temperatura
+        public int Temperatura
         {
             get { return _Tempertatura; }
             set { SetValue(ref _Tempertatura, value); }
@@ -140,7 +140,7 @@ namespace AirePuro.ViewModel.EditarModulo
             temperatura.ubicacion = Habitacion;
             temperatura.humedad = Humedad;
             temperatura.temperatura=Temperatura;
-            temperatura.PinDatos = PinDatos;
+            temperatura.pinDatos = SelectedPinTemp.pinTemp;
 
             _Sentemperatura.Actualizardatos(temperatura);
                   
@@ -148,7 +148,7 @@ namespace AirePuro.ViewModel.EditarModulo
         }
         public async Task EliminarAsync()
         {
-            if (_Sentemperatura.EliminarDatos(ID))
+            if (await _Sentemperatura.EliminarDatos(ID))
             {
                 DisplayAlert("Eliminado", $"Se a Eliminado el componente Ventilador", "Aceptar");
 

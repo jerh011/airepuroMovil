@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,45 +31,60 @@ namespace AirePuro.Simulacion
             }
         }
 
-        public bool Insertar(MSenTemp _Tem)
+        public async Task<bool> InsertarAsync(MSenTemp _Tem)
         {
-            
 
-            if (Cont <= 9)
+            try
             {
-                listaTemp.Add(_Tem);
-                return true;
+              
+                _Tem.id = "1";
+                var json = JsonConvert.SerializeObject(_Tem);
+                var contentJson = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(api_url, contentJson);
+                if (response.StatusCode == HttpStatusCode.Created)
+                    return true;
+                else
+                    return false;
             }
+            catch (Exception ex)
+            {
+                string si=ex.Message;
+
+                return false;
+            }
+
+
+        }
+
+        public async Task<bool>  Actualizardatos(MSenTemp _Tem)
+        {
+
+            Uri RequestUri = new Uri(api_url + $"/TemperaturaToUpdateXamarin/{_Tem.id}/{_Tem.ubicacion}/{_Tem.pinDatos}");
+            var client = new HttpClient();
+
+            var response = await client.PutAsync(RequestUri, null);
+
+            if (response.IsSuccessStatusCode)
+                return true;
             else
                 return false;
-
-
         }
-
-        public void Actualizardatos(MSenTemp _Tem)
+     
+        public async Task<bool> EliminarDatos(string ID)
         {
-            for (int i = 0; i <= Cont; i++)
+            try
             {
-                if (listaTemp[i] != null && listaTemp[i].id == _Tem.id)
-                {
-                    listaTemp[i] = _Tem;
-                    break;
-                }
-            }
-        }
-
-        public bool EliminarDatos(string ID)
-        {
-            for (int x = 0; x <= Cont; x++)
-            {
-                if (listaTemp[x].id == ID)
-                {
-                    listaTemp.RemoveAt(x);
-                    Cont--;
+                HttpResponseMessage response = await client.DeleteAsync($"{api_url}/Borrar/{ID}");
+                if (response.IsSuccessStatusCode)
                     return true;
-                }
+                else
+                    return false;
             }
-            return false;
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                return false;
+            }
         }
 
         public async Task<List<MSenTemp>> ObtenerAreglo()

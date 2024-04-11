@@ -49,7 +49,7 @@ namespace AirePuro.ViewModel
             {
                 listaTemperatura = await _SensorTemperatura.ObtenerAreglo();
                 // Filtrar los pines de encendido y RPM para que no se muestren en el DataPicker
-                _PineTemp = _PineTemp.Where(p => !listaTemperatura.Any(v => v.PinDatos == p.pinTemp)).ToList();
+                _PineTemp = _PineTemp.Where(p => !listaTemperatura.Any(v => v.pinDatos == p.pinTemp)).ToList();
             }).Wait(); ;
 
             Task.Run(async () =>
@@ -199,17 +199,17 @@ namespace AirePuro.ViewModel
                             _senTemp.id = ID;
                             _senTemp.ubicacion = Habitacion;
                             _senTemp.humedad = (random.Next(10, 60)).ToString();//cambiar a 0
-                            _senTemp.PinDatos = SelectTemp.pinTemp;
-                            _senTemp.temperatura = (random.Next(-19, 41)).ToString();
-                            if (_senTemp.PinDatos != null && Habitacion != null)
+                            _senTemp.pinDatos = SelectTemp.pinTemp;
+                            _senTemp.temperatura = (random.Next(-19, 41));
+                            if (_senTemp.pinDatos != null && Habitacion != null)
                             {
-                                if (_SensorTemperatura.Insertar(_senTemp))
+                                if (await _SensorTemperatura.InsertarAsync(_senTemp))
                                 {
                                     DisplayAlert("Registro", $"Se registro el sensor de {SelectedModulo.Value}", "Aceptar");
                                     await Volver();
                                 }
                                 else
-                                    DisplayAlert("Registro", "Registro fallido ser alcanzo el limite de resgistos de 10", "Aceptar");
+                                    DisplayAlert("Registro", "Registro fallido", "Aceptar");
                             }
                             else
                                 await DisplayAlert("Registro", "seleccione un puerto o seleccione habitacion", "Aceptar");

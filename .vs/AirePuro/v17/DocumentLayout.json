@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|c:\\eloy\\proyecto 5to\\airepuromovil\\airepuro\\airepuro\\views\\pantalla\\senosortemp.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
-      "RelativeMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|solutionrelative:airepuro\\airepuro\\views\\pantalla\\senosortemp.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|c:\\eloy\\proyecto 5to\\airepuromovil\\airepuro\\airepuro\\simulacion\\sentepsim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|solutionrelative:airepuro\\airepuro\\simulacion\\sentepsim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|c:\\eloy\\proyecto 5to\\airepuromovil\\airepuro\\airepuro\\viewmodel\\vmregistrarsensores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|solutionrelative:airepuro\\airepuro\\viewmodel\\vmregistrarsensores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|c:\\eloy\\proyecto 5to\\airepuromovil\\airepuro\\airepuro\\model\\msentemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|solutionrelative:airepuro\\airepuro\\model\\msentemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|c:\\eloy\\proyecto 5to\\airepuromovil\\airepuro\\airepuro\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|solutionrelative:airepuro\\airepuro\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|c:\\eloy\\proyecto 5to\\airepuromovil\\airepuro\\airepuro\\viewmodel\\editarmodulo\\vmeditartemperaturamodulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|solutionrelative:airepuro\\airepuro\\viewmodel\\editarmodulo\\vmeditartemperaturamodulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|c:\\eloy\\proyecto 5to\\airepuromovil\\airepuro\\airepuro\\viewmodel\\vmregistrarsensores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|solutionrelative:airepuro\\airepuro\\viewmodel\\vmregistrarsensores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,56 +26,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 248,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SenosorTemp.xaml",
-              "DocumentMoniker": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\Views\\Pantalla\\SenosorTemp.xaml",
-              "RelativeDocumentMoniker": "AirePuro\\AirePuro\\Views\\Pantalla\\SenosorTemp.xaml",
-              "ToolTip": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\Views\\Pantalla\\SenosorTemp.xaml",
-              "RelativeToolTip": "AirePuro\\AirePuro\\Views\\Pantalla\\SenosorTemp.xaml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-10T19:04:22.233Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\MainPage.xaml.cs",
-              "RelativeDocumentMoniker": "AirePuro\\AirePuro\\MainPage.xaml.cs",
-              "ToolTip": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\MainPage.xaml.cs",
-              "RelativeToolTip": "AirePuro\\AirePuro\\MainPage.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T18:53:16.832Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "VMRegistrarSensores.cs",
               "DocumentMoniker": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\ViewModel\\VMRegistrarSensores.cs",
               "RelativeDocumentMoniker": "AirePuro\\AirePuro\\ViewModel\\VMRegistrarSensores.cs",
               "ToolTip": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\ViewModel\\VMRegistrarSensores.cs",
               "RelativeToolTip": "AirePuro\\AirePuro\\ViewModel\\VMRegistrarSensores.cs",
-              "ViewState": "AQIAAKgAAAAAAAAAAAAkwMoAAAAwAAAA",
+              "ViewState": "AQIAALgAAAAAAAAAAADgv8oAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T18:34:03.378Z"
+              "WhenOpened": "2024-04-11T19:41:59.041Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "MSenTemp.cs",
+              "DocumentMoniker": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\Model\\MSenTemp.cs",
+              "RelativeDocumentMoniker": "AirePuro\\AirePuro\\Model\\MSenTemp.cs",
+              "ToolTip": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\Model\\MSenTemp.cs",
+              "RelativeToolTip": "AirePuro\\AirePuro\\Model\\MSenTemp.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T19:41:48.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "SenTepsim.cs",
               "DocumentMoniker": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\Simulacion\\SenTepsim.cs",
               "RelativeDocumentMoniker": "AirePuro\\AirePuro\\Simulacion\\SenTepsim.cs",
               "ToolTip": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\Simulacion\\SenTepsim.cs",
               "RelativeToolTip": "AirePuro\\AirePuro\\Simulacion\\SenTepsim.cs",
-              "ViewState": "AQIAAEEAAAAAAAAAAAAIwF8AAAAMAAAA",
+              "ViewState": "AQIAACkAAAAAAAAAAAAYwEIAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T18:09:38.163Z"
+              "WhenOpened": "2024-04-11T19:35:25.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VMEditarTemperaturaModulo.cs",
+              "DocumentMoniker": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\ViewModel\\EditarModulo\\VMEditarTemperaturaModulo.cs",
+              "RelativeDocumentMoniker": "AirePuro\\AirePuro\\ViewModel\\EditarModulo\\VMEditarTemperaturaModulo.cs",
+              "ToolTip": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\ViewModel\\EditarModulo\\VMEditarTemperaturaModulo.cs",
+              "RelativeToolTip": "AirePuro\\AirePuro\\ViewModel\\EditarModulo\\VMEditarTemperaturaModulo.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T19:32:39.773Z",
+              "EditorCaption": ""
             }
           ]
         }

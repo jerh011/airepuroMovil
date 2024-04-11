@@ -8,8 +8,8 @@ namespace AirePuro.Model
     {
         public string id { get; set; }
         public string ubicacion { get; set; }
-        public string temperatura { get; set; }
+        public int temperatura { get; set; }
         public string humedad { get; set; }
-        public string PinDatos { get; set; }
+        public string pinDatos { get; set; }
     }
 }
