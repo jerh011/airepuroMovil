@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AirePuro")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+241832509f930eaa27c25b20192b72a62a8e74eb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e2da1eb10a6ea770a0ff6b2b233e7883c33c0f1")]
 [assembly: System.Reflection.AssemblyProductAttribute("AirePuro")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AirePuro")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

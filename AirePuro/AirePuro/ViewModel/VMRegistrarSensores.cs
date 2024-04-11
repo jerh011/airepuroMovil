@@ -196,11 +196,11 @@ namespace AirePuro.ViewModel
                     case "Temperatura":
                         {
                             MSenTemp _senTemp = new MSenTemp();
-                            _senTemp.ID = ID;
-                            _senTemp.Habitacion = Habitacion;
-                            _senTemp.Humedad = (random.Next(10, 60)).ToString();//cambiar a 0
+                            _senTemp.id = ID;
+                            _senTemp.ubicacion = Habitacion;
+                            _senTemp.humedad = (random.Next(10, 60)).ToString();//cambiar a 0
                             _senTemp.PinDatos = SelectTemp.pinTemp;
-                            _senTemp.Temp = (random.Next(-19, 41)).ToString();
+                            _senTemp.temperatura = (random.Next(-19, 41)).ToString();
                             if (_senTemp.PinDatos != null && Habitacion != null)
                             {
                                 if (_SensorTemperatura.Insertar(_senTemp))

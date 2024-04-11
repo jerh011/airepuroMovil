@@ -54,7 +54,7 @@ namespace AirePuro.ViewModel
         }
         public async Task IraEditar(MSenTemp _modulo)
         {
-           // await Navigation.PushAsync(new EditarModulo(_modulo));
+           await Navigation.PushAsync(new EditarTemperaturaModulo(_modulo));
         }
 
         #endregion

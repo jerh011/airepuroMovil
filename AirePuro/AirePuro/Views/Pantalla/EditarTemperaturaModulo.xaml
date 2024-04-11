@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AirePuro.Views.Pantalla.EditarTemperaturaModulo">
+
+    <Grid RowDefinitions="80,*"
+          BackgroundColor="#1d1d1d">
+
+
+        <StackLayout Grid.Row="1" Margin="10" >
+            <!--ID-->
+            <StackLayout Orientation="Horizontal">
+
+
+                <Entry Placeholder="ID" 
+               FontAttributes="Bold" 
+               TextColor="#ffeb72"
+               PlaceholderColor="White"
+               TextTransform="Lowercase"
+               HorizontalOptions="StartAndExpand"
+               Text="{Binding ID}"
+               IsEnabled="False"
+               IsVisible="False"
+               />
+            </StackLayout>
+
+            <!--Habitacion-->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Habitacion: "
+               TextColor="White" 
+               FontAttributes="Bold"
+               VerticalOptions="Center"
+               FontSize="18"/>
+
+                <Entry Placeholder="Habitacion" 
+               FontAttributes="Bold" 
+               TextColor="#ffeb72"
+               PlaceholderColor="White"
+               TextTransform="Lowercase"
+               HorizontalOptions="StartAndExpand"
+               Text="{Binding Habitacion}"
+               />
+            </StackLayout>
+
+
+            <!-- Sensor picker -->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Componente: "
+               TextColor="White" 
+               FontAttributes="Bold"
+               VerticalOptions="Center"
+               FontSize="18"/>
+
+                <Picker x:Name="sensorPicker"
+                Title="Selecciona un sensor"
+                FontAttributes="Bold"
+                IsEnabled="False"
+                TextColor="#ffeb72"
+                ItemsSource="{Binding _ListaSensores}"
+                ItemDisplayBinding="{Binding Value}"
+                SelectedItem="{Binding SelectedSensor, Mode=TwoWay}"
+                HorizontalOptions="StartAndExpand"/>
+
+
+
+            </StackLayout>
+
+
+            <!-- pin Datos -->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Pin Datos: "
+               TextColor="White" 
+               FontAttributes="Bold"
+               VerticalOptions="Center"
+               FontSize="18"/>
+
+                <Picker x:Name="pinesRPM"
+                Title="Selecciona un sensor"
+                FontAttributes="Bold"
+                TextColor="#ffeb72"
+                ItemsSource="{Binding _PindatosTemp}"
+                ItemDisplayBinding="{Binding pinTemp}"
+                SelectedItem="{Binding SelectedPinTemp, Mode=TwoWay}"
+                HorizontalOptions="StartAndExpand"/>
+            </StackLayout>
+
+
+
+            <!---Temperatura-->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Temperatura: "
+                       TextColor="White" 
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       FontSize="18"/>
+
+                <Entry Placeholder="Temp" 
+                       FontAttributes="Bold" 
+                       TextColor="#ffeb72"
+                       PlaceholderColor="White"
+                       TextTransform="Lowercase"
+                       HorizontalOptions="StartAndExpand"
+                       Text="{Binding Temperatura}"
+                       IsEnabled="False"
+                 />
+            </StackLayout>
+
+            <!---Temperatura-->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Humedad: "
+               TextColor="White" 
+               FontAttributes="Bold"
+               VerticalOptions="Center"
+               FontSize="18"/>
+
+                <Entry Placeholder="Humedad" 
+               FontAttributes="Bold" 
+               TextColor="#ffeb72"
+               PlaceholderColor="White"
+               TextTransform="Lowercase"
+               HorizontalOptions="StartAndExpand"
+               Text="{Binding Humedad}"
+               IsEnabled="False"
+               />
+            </StackLayout>
+            <!--Btn-->
+            <Frame HorizontalOptions="Center"
+                   Padding="6"
+                   Margin="0,10,0,0"
+                   CornerRadius="15"
+                   HasShadow="False"
+                   BackgroundColor="#FEC100">
+
+                <Button
+                        Text="+"
+                        HorizontalOptions="Center"
+                        BackgroundColor="#FEC100"
+                        BorderColor="#FFE488"
+                        BorderWidth="6"
+                        CornerRadius="15"
+                        FontSize="25"
+                        WidthRequest="60"
+                        HeightRequest="60"
+                        Command="{Binding EditarModuloSensorcommand}"/>
+            </Frame>
+
+
+
+            <Button  Text="-" Command="{Binding EliminarModuloSensorcommand}"/>
+
+        </StackLayout>
+    </Grid>
+
+</ContentPage>

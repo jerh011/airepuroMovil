@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|c:\\eloy\\proyecto 5to\\airepuromovil\\airepuro\\airepuro\\viewmodel\\vmsensortemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|solutionrelative:airepuro\\airepuro\\viewmodel\\vmsensortemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|c:\\eloy\\proyecto 5to\\airepuromovil\\airepuro\\airepuro\\simulacion\\ventiladoressim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|solutionrelative:airepuro\\airepuro\\simulacion\\ventiladoressim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|c:\\eloy\\proyecto 5to\\airepuromovil\\airepuro\\airepuro\\views\\pantalla\\registrarsensores.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|solutionrelative:airepuro\\airepuro\\views\\pantalla\\registrarsensores.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 248,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Ventiladoressim.cs",
+              "DocumentMoniker": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\Simulacion\\Ventiladoressim.cs",
+              "RelativeDocumentMoniker": "AirePuro\\AirePuro\\Simulacion\\Ventiladoressim.cs",
+              "ToolTip": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\Simulacion\\Ventiladoressim.cs",
+              "RelativeToolTip": "AirePuro\\AirePuro\\Simulacion\\Ventiladoressim.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAowDUAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T20:21:10.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VMSensorTemp.cs",
+              "DocumentMoniker": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\ViewModel\\VMSensorTemp.cs",
+              "RelativeDocumentMoniker": "AirePuro\\AirePuro\\ViewModel\\VMSensorTemp.cs",
+              "ToolTip": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\ViewModel\\VMSensorTemp.cs",
+              "RelativeToolTip": "AirePuro\\AirePuro\\ViewModel\\VMSensorTemp.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T20:01:21.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegistrarSensores.xaml",
+              "DocumentMoniker": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\Views\\Pantalla\\RegistrarSensores.xaml",
+              "RelativeDocumentMoniker": "AirePuro\\AirePuro\\Views\\Pantalla\\RegistrarSensores.xaml",
+              "ToolTip": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\Views\\Pantalla\\RegistrarSensores.xaml",
+              "RelativeToolTip": "AirePuro\\AirePuro\\Views\\Pantalla\\RegistrarSensores.xaml",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAiwKoAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-09T18:42:25.736Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

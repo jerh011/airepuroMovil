@@ -1,6 +1,8 @@
 ﻿using AirePuro.Model;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,9 +12,12 @@ namespace AirePuro.Simulacion
     {
 
         List<MSenTemp> listaTemp = new List<MSenTemp>();
-        public int Cont = -1;
         private static SenTepsim _instanciaAtreglo;
+        private static Ventiladoressim _instanciaVentiladior;
 
+        private string api_url = "https://1p9p726s-5031.usw3.devtunnels.ms/api/SensorTemperatura";
+        static HttpClient client = new HttpClient();
+        int Cont=-1;
         public static SenTepsim Instancia
         {
             get
@@ -27,7 +32,7 @@ namespace AirePuro.Simulacion
 
         public bool Insertar(MSenTemp _Tem)
         {
-            Cont++;
+            
 
             if (Cont <= 9)
             {
@@ -44,7 +49,7 @@ namespace AirePuro.Simulacion
         {
             for (int i = 0; i <= Cont; i++)
             {
-                if (listaTemp[i] != null && listaTemp[i].ID == _Tem.ID)
+                if (listaTemp[i] != null && listaTemp[i].id == _Tem.id)
                 {
                     listaTemp[i] = _Tem;
                     break;
@@ -56,7 +61,7 @@ namespace AirePuro.Simulacion
         {
             for (int x = 0; x <= Cont; x++)
             {
-                if (listaTemp[x].ID == ID)
+                if (listaTemp[x].id == ID)
                 {
                     listaTemp.RemoveAt(x);
                     Cont--;
@@ -68,7 +73,26 @@ namespace AirePuro.Simulacion
 
         public async Task<List<MSenTemp>> ObtenerAreglo()
         {
+            string Temperatura = null;
+            try
+            {
+                HttpResponseMessage response = await client.GetAsync(api_url);
+                if (response.IsSuccessStatusCode)
+                {
 
+                    Temperatura = await response.Content.ReadAsStringAsync();
+                    listaTemp = JsonConvert.DeserializeObject<List<MSenTemp>>(Temperatura);
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+
+          
             return listaTemp;
         }
     }

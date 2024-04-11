@@ -6,10 +6,10 @@ namespace AirePuro.Model
 {
     public class MSenTemp
     {
-        public string ID { get; set; }
-        public string Habitacion { get; set; }
-        public string Temp { get; set; }
-        public string Humedad { get; set; }
+        public string id { get; set; }
+        public string ubicacion { get; set; }
+        public string temperatura { get; set; }
+        public string humedad { get; set; }
         public string PinDatos { get; set; }
     }
 }
