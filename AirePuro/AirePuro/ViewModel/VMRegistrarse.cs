@@ -21,7 +21,7 @@ namespace AirePuro.ViewModel
         public VMRegistrarse(INavigation naivigation)
         {
             Navigation = naivigation;
-            Registrarcommand = new Command(async () => await Registrar(), () => CamposRellenados);
+           // Registrarcommand = new Command(async () => await Registrar(), () => CamposRellenados);
         }
         #region Objetos
         public string Usuario
@@ -85,7 +85,7 @@ namespace AirePuro.ViewModel
         {
             if (Contraseña != ConfirmarContraseña)
             {
-                await Application.Current.MainPage.DisplayAlert("Error", "Las contraseñas no coinciden", "OK");
+                await DisplayAlert("Error", "Las contraseñas no coinciden", "OK");
                 return; // No permitir el registro si las contraseñas no coinciden
             }
             else
@@ -93,8 +93,8 @@ namespace AirePuro.ViewModel
                 // Guardar los datos del usuario en Preferences
                 Preferences.Set("Usuario", Usuario);
                 Preferences.Set("Contraseña", Contraseña);
-
-                await Application.Current.MainPage.DisplayAlert("Felicidades", "Registro Exitoso", "ok");
+               
+                await DisplayAlert("Felicidades", "Registro Exitoso", "ok");
                 await Navigation.PushAsync(new Login());
             }
         }
@@ -110,7 +110,7 @@ namespace AirePuro.ViewModel
 
         public ICommand volvercommand => new Command(async () => await VolverAtras());
 
-        public ICommand Registrarcommand { get; private set; }
+        public ICommand Registrarcommand => new Command(async () => await Registrar(), () => CamposRellenados);// { get; private set; }
         #endregion
     }
 }

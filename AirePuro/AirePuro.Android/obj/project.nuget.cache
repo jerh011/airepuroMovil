@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wwpRoa32XxsslYX14VJZQIMp/79FzLp/ivoDmd6e+lYx/VVV+nYkW3Z/MuZZl+DehYRZ7uqWIFHJ+9lxW/M1dg==",
+  "dgSpecHash": "hsSHpCVNWC6e+SCz8ra8q1ZGL9VBrHDJtkVow8Eb6yefnXQ8N7uSTp2zBk8LHmgNnWnmGlCmNFFQj4PQs6125Q==",
   "success": true,
-  "projectFilePath": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro.Android\\AirePuro.Android.csproj",
+  "projectFilePath": "C:\\Eloy\\Proyecto 5to\\xd\\airepuroMovil\\AirePuro\\AirePuro.Android\\AirePuro.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cd22\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\cd22\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",

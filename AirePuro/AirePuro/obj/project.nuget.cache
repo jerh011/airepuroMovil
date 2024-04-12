@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hoqjZdu61LRM7zdpkGsZhc4YrsbtlwoSa5h4qmlucuyP5hDJ3IRLhbyPJ0aH0GDsRpCd3jURYHSpm2wBTbKR7g==",
+  "dgSpecHash": "0X9G2oqt2MyUeCQB7EfAUReG+zoxTotqrZxhXX9De9jvc6/VpmeUhx7Sj9DMqUMY45EFjpfz6qrYjyOt/90kNA==",
   "success": true,
-  "projectFilePath": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj",
+  "projectFilePath": "C:\\Eloy\\Proyecto 5to\\xd\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cd22\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\cd22\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

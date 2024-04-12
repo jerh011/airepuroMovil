@@ -46,6 +46,7 @@
                    IsPassword="True" 
                    Margin="0,0,0,10"
                    Text="{Binding Contraseña}"/>
+            
             <Label Text="Confirmar contraseña"
                    TextColor="Black"
                    FontSize="20"/>

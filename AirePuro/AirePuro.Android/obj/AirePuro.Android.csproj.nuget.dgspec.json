@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro.Android\\AirePuro.Android.csproj": {}
+    "C:\\Eloy\\Proyecto 5to\\xd\\airepuroMovil\\AirePuro\\AirePuro.Android\\AirePuro.Android.csproj": {}
   },
   "projects": {
-    "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro.Android\\AirePuro.Android.csproj": {
+    "C:\\Eloy\\Proyecto 5to\\xd\\airepuroMovil\\AirePuro\\AirePuro.Android\\AirePuro.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro.Android\\AirePuro.Android.csproj",
+        "projectUniqueName": "C:\\Eloy\\Proyecto 5to\\xd\\airepuroMovil\\AirePuro\\AirePuro.Android\\AirePuro.Android.csproj",
         "projectName": "AirePuro.Android",
-        "projectPath": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro.Android\\AirePuro.Android.csproj",
+        "projectPath": "C:\\Eloy\\Proyecto 5to\\xd\\airepuroMovil\\AirePuro\\AirePuro.Android\\AirePuro.Android.csproj",
         "packagesPath": "C:\\Users\\cd22\\.nuget\\packages\\",
-        "outputPath": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro.Android\\obj\\",
+        "outputPath": "C:\\Eloy\\Proyecto 5to\\xd\\airepuroMovil\\AirePuro\\AirePuro.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid13.0": {
             "projectReferences": {
-              "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj": {
-                "projectPath": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj"
+              "C:\\Eloy\\Proyecto 5to\\xd\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj": {
+                "projectPath": "C:\\Eloy\\Proyecto 5to\\xd\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj"
               }
             }
           }
@@ -59,14 +59,14 @@
         }
       }
     },
-    "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj": {
+    "C:\\Eloy\\Proyecto 5to\\xd\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj",
+        "projectUniqueName": "C:\\Eloy\\Proyecto 5to\\xd\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj",
         "projectName": "AirePuro",
-        "projectPath": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj",
+        "projectPath": "C:\\Eloy\\Proyecto 5to\\xd\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj",
         "packagesPath": "C:\\Users\\cd22\\.nuget\\packages\\",
-        "outputPath": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\obj\\",
+        "outputPath": "C:\\Eloy\\Proyecto 5to\\xd\\airepuroMovil\\AirePuro\\AirePuro\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

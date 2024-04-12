@@ -591,11 +591,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj",
+      "projectUniqueName": "C:\\Eloy\\Proyecto 5to\\xd\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj",
       "projectName": "AirePuro",
-      "projectPath": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj",
+      "projectPath": "C:\\Eloy\\Proyecto 5to\\xd\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj",
       "packagesPath": "C:\\Users\\cd22\\.nuget\\packages\\",
-      "outputPath": "C:\\Eloy\\Proyecto 5to\\airepuroMovil\\AirePuro\\AirePuro\\obj\\",
+      "outputPath": "C:\\Eloy\\Proyecto 5to\\xd\\airepuroMovil\\AirePuro\\AirePuro\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
