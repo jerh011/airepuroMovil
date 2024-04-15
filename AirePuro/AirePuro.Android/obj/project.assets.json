@@ -3452,24 +3452,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cd22\\.nuget\\packages\\": {},
+    "C:\\Users\\Jesus\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Eloy\\Proyecto 5to\\xd\\airepuroMovil\\AirePuro\\AirePuro.Android\\AirePuro.Android.csproj",
+      "projectUniqueName": "C:\\zProyecto\\si xd\\airepuroMovil\\AirePuro\\AirePuro.Android\\AirePuro.Android.csproj",
       "projectName": "AirePuro.Android",
-      "projectPath": "C:\\Eloy\\Proyecto 5to\\xd\\airepuroMovil\\AirePuro\\AirePuro.Android\\AirePuro.Android.csproj",
-      "packagesPath": "C:\\Users\\cd22\\.nuget\\packages\\",
-      "outputPath": "C:\\Eloy\\Proyecto 5to\\xd\\airepuroMovil\\AirePuro\\AirePuro.Android\\obj\\",
+      "projectPath": "C:\\zProyecto\\si xd\\airepuroMovil\\AirePuro\\AirePuro.Android\\AirePuro.Android.csproj",
+      "packagesPath": "C:\\Users\\Jesus\\.nuget\\packages\\",
+      "outputPath": "C:\\zProyecto\\si xd\\airepuroMovil\\AirePuro\\AirePuro.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\cd22\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3483,16 +3483,11 @@
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "C:\\Eloy\\Proyecto 5to\\xd\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj": {
-              "projectPath": "C:\\Eloy\\Proyecto 5to\\xd\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj"
+            "C:\\zProyecto\\si xd\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj": {
+              "projectPath": "C:\\zProyecto\\si xd\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj"
             }
           }
         }
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3501,14 +3496,6 @@
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.7.0, )"
-          },
-          "Xamarin.Essentials": {
-            "target": "Package",
-            "version": "[1.7.0, )"
-          },
-          "Xamarin.Forms": {
-            "target": "Package",
-            "version": "[5.0.0.2196, )"
           },
           "Xamarin.Forms": {
             "target": "Package",

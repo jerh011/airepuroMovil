@@ -1,6 +1,7 @@
 ﻿using AirePuro.Model;
 using AirePuro.Model.Listados;
 using AirePuro.Simulacion;
+using AirePuro.Simulacion.Logueo;
 using AirePuro.Views.Pantalla;
 using System;
 using System.Collections.Generic;
@@ -32,6 +33,8 @@ namespace AirePuro.ViewModel
         public Ventiladoressim _VENTILADORES = Ventiladoressim.Instancia;
         public SenGazSim _SensorGaz = SenGazSim.Instancia;
         public SenTepsim _SensorTemperatura = SenTepsim.Instancia;
+        public SenTepsim _ = SenTepsim.Instancia;
+        private Logueo _Logueo = Logueo.Instancia;
         private Random random = new Random();
         private List<MVentilador> listaVenti;
         private List<MSenTemp> listaTemperatura;
@@ -47,14 +50,17 @@ namespace AirePuro.ViewModel
             _PineTemp=GetPinesDatosTemp();
             Task.Run(async () =>
             {
-                listaTemperatura = await _SensorTemperatura.ObtenerAreglo();
+                string idUsuario = await _Logueo.OpteneteUsuari();
+                listaTemperatura = await _SensorTemperatura.ObtenerAreglo(idUsuario);
                 // Filtrar los pines de encendido y RPM para que no se muestren en el DataPicker
                 _PineTemp = _PineTemp.Where(p => !listaTemperatura.Any(v => v.pinDatos == p.pinTemp)).ToList();
             }).Wait(); ;
 
+            
             Task.Run(async () =>
             {
-                listaVenti = await _VENTILADORES.ObtenerAreglo();
+                string idUsuario = await _Logueo.OpteneteUsuari();
+                listaVenti = await _VENTILADORES.ObtenerAreglo(idUsuario);
                 // Filtrar los pines de encendido y RPM para que no se muestren en el DataPicker
                 _PinesEncendido = _PinesEncendido.Where(p => !listaVenti.Any(v => v.pinEnsendido == p.pinEnsendido)).ToList();
                 _PinesRPM = _PinesRPM.Where(p => !listaVenti.Any(v => v.pinRPM == p.pinRPM)).ToList();
@@ -89,19 +95,19 @@ namespace AirePuro.ViewModel
         {
             return new List<PinesRPM>()
             {
-                new PinesRPM(){Key= 1,pinRPM="22" },
-                new PinesRPM(){Key= 2,pinRPM="23" },
-                new PinesRPM(){Key= 3,pinRPM="18" },
-                new PinesRPM(){Key= 3,pinRPM="19" }
+                new PinesRPM(){Key= 1,pinRPM="25" },
+                new PinesRPM(){Key= 2,pinRPM="26" },
+                new PinesRPM(){Key= 3,pinRPM="27" },
+                new PinesRPM(){Key= 3,pinRPM="14" }
             };
         }
         public List<PinesEncendido> GetPinesEncendido()
         {
             return new List<PinesEncendido>()
             {
-                new PinesEncendido(){Key= 1,pinEnsendido="4" },
-                new PinesEncendido(){Key= 2,pinEnsendido="2" },
-                new PinesEncendido(){Key= 3,pinEnsendido="15" },
+                new PinesEncendido(){Key= 1,pinEnsendido="32" },
+                new PinesEncendido(){Key= 2,pinEnsendido="23" },
+                new PinesEncendido(){Key= 3,pinEnsendido="12" },
                 new PinesEncendido(){Key= 3,pinEnsendido="13" }
             };
         }
@@ -162,6 +168,8 @@ namespace AirePuro.ViewModel
                             ventilador.ubicacion = Habitacion;
                             ventilador.rpm = random.Next(699, 3201);
                             ventilador.encendido = true;
+
+                            ventilador.idUsuario = await _Logueo.OpteneteUsuari();
                             ventilador.pinEnsendido = SelectedEncendido.pinEnsendido;
                             ventilador.pinRPM = SelectedRPM.pinRPM;
                             if (ventilador.pinRPM != null && ventilador.pinEnsendido != null && Habitacion!=null)
@@ -194,13 +202,15 @@ namespace AirePuro.ViewModel
                         }
                         break;
                     case "Temperatura":
-                        {
+                         {
                             MSenTemp _senTemp = new MSenTemp();
                             _senTemp.id = ID;
                             _senTemp.ubicacion = Habitacion;
                             _senTemp.humedad = (random.Next(10, 60)).ToString();//cambiar a 0
                             _senTemp.pinDatos = SelectTemp.pinTemp;
-                            _senTemp.temperatura = (random.Next(-19, 41));
+                            _senTemp.temperatura = (random.Next(-19, 41)).ToString();
+                            _senTemp.idUsuario = await _Logueo.OpteneteUsuari();
+
                             if (_senTemp.pinDatos != null && Habitacion != null)
                             {
                                 if (await _SensorTemperatura.InsertarAsync(_senTemp))

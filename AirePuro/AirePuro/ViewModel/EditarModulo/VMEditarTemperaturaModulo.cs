@@ -10,31 +10,33 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using AirePuro.Model.Listados;
 using AirePuro.Views.PantallasMenuHamburgesa;
+using AirePuro.Simulacion.Logueo;
 
 namespace AirePuro.ViewModel.EditarModulo
 {
     internal class VMEditarTemperaturaModulo : BaseViewModel
     {
         #region variables
-        public List<DPikerListado> _ListaSensores { get; set; }
-        public List<PindatosTemp> _PindatosTemp { get; set; }
+        private List<DPikerListado> _ListaSensores { get; set; }
+        private List<PindatosTemp> _PindatosTemp { get; set; }
         
         private List<MSenTemp> listaTemperatura;
 
-        public string _ElimnacionComponente;
-        public string _ID;
-        public string _Habitacion;
-        public string _PinDatos;
-        public string _Humedad;
-        public int _Tempertatura;
+        private string _ElimnacionComponente;
+        private string _ID;
+        private string _Habitacion;
+        private string _PinDatos;
+        private string _Humedad;
+        private string _Tempertatura;
 
         private DPikerListado _selectedSensor = new DPikerListado();
         private PindatosTemp _selectedPindatosTemp = new PindatosTemp();
-        
+
 
         //BORRAR de apartir de aqui despues del lunes o no 
-        public SenTepsim _Sentemperatura = SenTepsim.Instancia;
+        private SenTepsim _Sentemperatura = SenTepsim.Instancia;
         private Random random = new Random();
+        private Logueo _Logueo = Logueo.Instancia;
 
         //aquillano
         #endregion
@@ -56,7 +58,8 @@ namespace AirePuro.ViewModel.EditarModulo
 
             Task.Run(async () =>
             {
-                listaTemperatura = await _Sentemperatura.ObtenerAreglo();
+                string idUsuario = await _Logueo.OpteneteUsuari();
+                listaTemperatura = await _Sentemperatura.ObtenerAreglo(idUsuario);
                 _PindatosTemp = _PindatosTemp.Where(p => !listaTemperatura.Any(v => v.pinDatos == p.pinTemp)).ToList();
             }).Wait();
         }
@@ -73,7 +76,7 @@ namespace AirePuro.ViewModel.EditarModulo
             get { return _Habitacion; }
             set { SetValue(ref _Habitacion, value); }
         }
-        public int Temperatura
+        public string Temperatura
         {
             get { return _Tempertatura; }
             set { SetValue(ref _Tempertatura, value); }

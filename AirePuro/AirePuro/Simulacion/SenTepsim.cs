@@ -87,12 +87,12 @@ namespace AirePuro.Simulacion
             }
         }
 
-        public async Task<List<MSenTemp>> ObtenerAreglo()
+        public async Task<List<MSenTemp>> ObtenerAreglo(string ID)
         {
             string Temperatura = null;
             try
             {
-                HttpResponseMessage response = await client.GetAsync(api_url);
+                HttpResponseMessage response = await client.GetAsync(api_url+ $"/TemperaturaByIdUsuario/{ID}");
                 if (response.IsSuccessStatusCode)
                 {
 

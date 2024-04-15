@@ -1,5 +1,6 @@
 ﻿using AirePuro.Model;
 using AirePuro.Simulacion;
+using AirePuro.Simulacion.Logueo;
 using AirePuro.Views.Pantalla;
 using System;
 using System.Collections.Generic;
@@ -13,8 +14,9 @@ namespace AirePuro.ViewModel
     internal class VMSensorTemp : BaseViewModel
     {
         #region variables
-        public List<MSenTemp> _SensoresVentiladores;
-        SenTepsim _SenTep = SenTepsim.Instancia;
+        private List<MSenTemp> _SensoresVentiladores;
+        private SenTepsim _SenTep = SenTepsim.Instancia;
+        private Logueo _Logueo = Logueo.Instancia;
         #endregion
 
         public VMSensorTemp(INavigation naivigation)
@@ -42,8 +44,8 @@ namespace AirePuro.ViewModel
 
         public async Task ListarSenTemp()
         {
-            
-            Lista = await _SenTep.ObtenerAreglo();
+            string idUsuario = await _Logueo.OpteneteUsuari();
+            Lista = await _SenTep.ObtenerAreglo(idUsuario);
         }
 
 

@@ -8,18 +8,11 @@ namespace AirePuro.Model
     {
      
         public string id { get; set; }
-
-
+        public string idUsuario { get; set; }
         public int rpm { get; set; }
-
         public string ubicacion { get; set; }
-    
         public bool encendido { get; set; }
-
-     
         public string pinEnsendido { get; set; }
-
-  
         public string pinRPM { get; set; }
     }
 }

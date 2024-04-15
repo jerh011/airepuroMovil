@@ -10,6 +10,7 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using AirePuro.Model.Listados;
 using AirePuro.Views.PantallasMenuHamburgesa;
+using AirePuro.Simulacion.Logueo;
 
 namespace AirePuro.ViewModel.EditarModulo
 {
@@ -19,7 +20,7 @@ namespace AirePuro.ViewModel.EditarModulo
         public List<DPikerListado> _ListaSensores { get; set; }
         public List<PinesEncendido> _PinesEncendido { get; set; }
         public List<PinesRPM> _PinesRPM { get; set; }
-        private List<MVentilador> listaVenti;
+        public List<MVentilador> listaVenti;
 
 
 
@@ -36,6 +37,8 @@ namespace AirePuro.ViewModel.EditarModulo
 
         //BORRAR de apartir de aqui despues del lunes o no 
         public Ventiladoressim _VENTILADORES = Ventiladoressim.Instancia;
+        public Logueo _Logueo = Logueo.Instancia;
+
         private Random random = new Random();
 
         //aquillano
@@ -57,13 +60,18 @@ namespace AirePuro.ViewModel.EditarModulo
 
             _ElimnacionComponente = "Ventilador";
 
+           
             Task.Run(async () =>
             {
-                listaVenti = await _VENTILADORES.ObtenerAreglo();
+                string idUsuario = await _Logueo.OpteneteUsuari();
+                listaVenti = await _VENTILADORES.ObtenerAreglo(idUsuario);
+                // Filtrando los pines encendido que no están en uso por los ventiladores existentes
                 _PinesEncendido = _PinesEncendido.Where(p => !listaVenti.Any(v => v.pinEnsendido == p.pinEnsendido)).ToList();
+                // Filtrando los pines RPM que no están en uso por los ventiladores existentes
                 _PinesRPM = _PinesRPM.Where(p => !listaVenti.Any(v => v.pinRPM == p.pinRPM)).ToList();
             }).Wait();
         }
+
         #endregion
 
         #region Objetos
@@ -119,14 +127,16 @@ namespace AirePuro.ViewModel.EditarModulo
 
             return lista;
         }
+
+
         public List<PinesRPM> GetPinesRPM()
         {
             return new List<PinesRPM>()
             {
-                new PinesRPM(){Key= 1,pinRPM="22" },
-                new PinesRPM(){Key= 2,pinRPM="23" },
-                new PinesRPM(){Key= 3,pinRPM="18" },
-                new PinesRPM(){Key= 3,pinRPM="19" }
+                new PinesRPM(){Key= 1,pinRPM="25" },
+                new PinesRPM(){Key= 2,pinRPM="26" },
+                new PinesRPM(){Key= 3,pinRPM="27" },
+                new PinesRPM(){Key= 3,pinRPM="14" }
 
             };
         }
@@ -134,9 +144,9 @@ namespace AirePuro.ViewModel.EditarModulo
         {
             return new List<PinesEncendido>()
             {
-                new PinesEncendido(){Key= 1,pinEnsendido="4" },
-                new PinesEncendido(){Key= 2,pinEnsendido="2" },
-                new PinesEncendido(){Key= 3,pinEnsendido="15" },
+                new PinesEncendido(){Key= 1,pinEnsendido="32" },
+                new PinesEncendido(){Key= 2,pinEnsendido="23" },
+                new PinesEncendido(){Key= 3,pinEnsendido="12" },
                 new PinesEncendido(){Key= 3,pinEnsendido="13" }
             };
         }
@@ -150,10 +160,17 @@ namespace AirePuro.ViewModel.EditarModulo
 
             ventilador.id = ID;
             ventilador.ubicacion = Habitacion;
-            ventilador.pinEnsendido = PinEncendido;
-            ventilador.pinRPM =PinRPM;
+            if (SelectedEncendido.pinEnsendido != null)
+                ventilador.pinEnsendido = SelectedEncendido.pinEnsendido;
+            else
+                ventilador.pinEnsendido = PinEncendido;
 
-            _VENTILADORES.Actualizardatos(ventilador);
+            if (SelectedRPM.pinRPM != null)
+                ventilador.pinRPM = SelectedRPM.pinRPM;
+            else
+                ventilador.pinRPM = PinRPM;
+
+           _VENTILADORES.Actualizardatos(ventilador);
                   
             Volver();
         }

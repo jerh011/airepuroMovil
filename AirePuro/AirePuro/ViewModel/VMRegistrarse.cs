@@ -1,4 +1,6 @@
-﻿using AirePuro.Views.Pantalla;
+﻿using AirePuro.Model;
+using AirePuro.Simulacion;
+using AirePuro.Views.Pantalla;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,9 +11,11 @@ using Xamarin.Forms;
 
 namespace AirePuro.ViewModel
 {
-    internal class VMRegistrarse : BaseViewModel
+    public class VMRegistrarse : BaseViewModel
     {
         #region Variables
+        private ConexionLogin _ConexionLogin = new ConexionLogin();
+        private MUsuario _MUsuario = new MUsuario();
         private string _usuario;
         private string _numero;
         private string _contraseña;
@@ -21,7 +25,7 @@ namespace AirePuro.ViewModel
         public VMRegistrarse(INavigation naivigation)
         {
             Navigation = naivigation;
-           // Registrarcommand = new Command(async () => await Registrar(), () => CamposRellenados);
+           Registrarcommand = new Command(async () => await Registrar(), () => CamposRellenados);
         }
         #region Objetos
         public string Usuario
@@ -91,11 +95,27 @@ namespace AirePuro.ViewModel
             else
             {
                 // Guardar los datos del usuario en Preferences
-                Preferences.Set("Usuario", Usuario);
-                Preferences.Set("Contraseña", Contraseña);
-               
-                await DisplayAlert("Felicidades", "Registro Exitoso", "ok");
-                await Navigation.PushAsync(new Login());
+                /*
+                   Preferences.Set("Usuario", Usuario);
+                   Preferences.Set("Contraseña", Contraseña);
+                */
+
+
+                _MUsuario.Cuenta = Usuario;
+                _MUsuario.Numero = Numero;
+                _MUsuario.Contrasena = Contraseña;
+                string mensage= await _ConexionLogin.Registrar(_MUsuario);
+                if (mensage == "Usuario creado exitosamente")
+                {
+                    await DisplayAlert("Felicidades", $"{mensage}", "ok");
+                    await Navigation.PushAsync(new Login());
+
+                }
+                else
+                {
+                    await DisplayAlert("Error", $"{mensage}", "OK");
+                    return; // No permitir el registro si las contraseñas no coinciden
+                }
             }
         }
         public async Task VolverAtras()
@@ -110,7 +130,7 @@ namespace AirePuro.ViewModel
 
         public ICommand volvercommand => new Command(async () => await VolverAtras());
 
-        public ICommand Registrarcommand => new Command(async () => await Registrar(), () => CamposRellenados);// { get; private set; }
+        public ICommand Registrarcommand { get; private set; }
         #endregion
     }
 }

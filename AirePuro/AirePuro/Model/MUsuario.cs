@@ -8,7 +8,7 @@ namespace AirePuro.Model
     {
        
         public string Id { get; set; }
-        public string Nombre { get; set; }
+        public string Cuenta { get; set; }
         public string Contrasena { get; set; }
         public string Numero { get; set; } = string.Empty;
     }

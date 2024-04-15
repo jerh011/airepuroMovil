@@ -1,6 +1,7 @@
 ﻿using AirePuro.Model;
 using AirePuro.Model.Listados;
 using AirePuro.Simulacion;
+using AirePuro.Simulacion.Logueo;
 using AirePuro.Views.Pantalla;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,8 @@ namespace AirePuro.ViewModel
     {
         #region variables
         private List<MVentilador> _SensoresVentiladores;
-    
+        private Ventiladoressim _VENTILADORES = Ventiladoressim.Instancia;//BORRAR
+        private Logueo _Logueo = Logueo.Instancia;
 
         #endregion
 
@@ -47,8 +49,10 @@ namespace AirePuro.ViewModel
 
         public async Task ListarVentiladores()
         {
-            var _VENTILADORES = Ventiladoressim.Instancia;//BORRAR
-            Lista =await  _VENTILADORES.ObtenerAreglo();
+            
+            string idUsuario = await _Logueo.OpteneteUsuari();
+
+            Lista =await  _VENTILADORES.ObtenerAreglo(idUsuario);
         }
         public async Task IraEditar(MVentilador _modulo)
         {

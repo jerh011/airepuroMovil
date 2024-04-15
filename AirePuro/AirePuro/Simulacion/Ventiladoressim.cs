@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using AirePuro.Views.Pantalla;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 
 namespace AirePuro.Simulacion
 {
@@ -51,13 +52,13 @@ namespace AirePuro.Simulacion
                 }
         }
       
-        public async Task<List<MVentilador>> ObtenerAreglo()
+        public async Task<List<MVentilador>> ObtenerAreglo(string id)
         {
 
             string Ventilor=null;
             try
             {
-                HttpResponseMessage response = await client.GetAsync(api_url);
+                HttpResponseMessage response = await client.GetAsync(api_url+ $"/OptenerVentiladoresbyUsuario/{id}");
                 if (response.IsSuccessStatusCode)
                 {
                    

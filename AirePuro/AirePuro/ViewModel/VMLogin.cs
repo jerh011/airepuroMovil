@@ -1,4 +1,7 @@
-﻿using AirePuro.Views.Pantalla;
+﻿using AirePuro.Model;
+using AirePuro.Simulacion;
+using AirePuro.Simulacion.Logueo;
+using AirePuro.Views.Pantalla;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,28 +14,43 @@ namespace AirePuro.ViewModel
 {
     internal class VMLogin : BaseViewModel
     {
-        private string _campo1;
-        private string _campo2;
+        #region variables
+        private string _UsuarioLogin;
+        private string _ContraseñaLogin;
         private bool _camposRellenados;
+        private Logueo _Logueo = Logueo.Instancia;
+  
+        private ConexionLogin _ConexionLogin = new ConexionLogin();
+        #endregion
 
-        public string Campo1
+        #region constructor
+        public VMLogin(INavigation naivigation)
         {
-            get { return _campo1; }
+            Navigation = naivigation;
+            Iniciarcommand = new Command(async () => await IniciarSesion(), () => CamposRellenados);
+            Registrarcommand = new Command(async () => await Registrar());
+        }
+        #endregion
+
+        #region Objetos
+        public string UsuarioLogin
+        {
+            get { return _UsuarioLogin; }
             set
             {
-                _campo1 = value;
-                OnPropertyChanged(nameof(Campo1));
+                _UsuarioLogin = value;
+                OnPropertyChanged(nameof(UsuarioLogin));
                 VerificarCamposRellenados();
             }
         }
 
-        public string Campo2
+        public string ContraseñaLogin
         {
-            get { return _campo2; }
+            get { return _ContraseñaLogin; }
             set
             {
-                _campo2 = value;
-                OnPropertyChanged(nameof(Campo2));
+                _ContraseñaLogin = value;
+                OnPropertyChanged(nameof(ContraseñaLogin));
                 VerificarCamposRellenados();
             }
         }
@@ -46,35 +64,34 @@ namespace AirePuro.ViewModel
                 OnPropertyChanged(nameof(CamposRellenados));
             }
         }
+        #endregion
 
-        public ICommand Iniciarcommand { get; private set; }
-        public ICommand Registrarcommand { get; private set; }
 
-        public VMLogin(INavigation naivigation)
-        {
-            Navigation = naivigation;
-            Iniciarcommand = new Command(async () => await IniciarSesion(), () => CamposRellenados);
-            Registrarcommand = new Command(async () => await Registrar());
-        }
-
+        #region Procesos
         private void VerificarCamposRellenados()
         {
-            CamposRellenados = !string.IsNullOrWhiteSpace(Campo1) && !string.IsNullOrWhiteSpace(Campo2);
+            CamposRellenados = !string.IsNullOrWhiteSpace(UsuarioLogin) && !string.IsNullOrWhiteSpace(ContraseñaLogin);
         }
 
         private async Task IniciarSesion()
         {
+            /*
             string usuarioRegistrado = Preferences.Get("Usuario", string.Empty);
             string contraseñaRegistrada = Preferences.Get("Contraseña", string.Empty);
+            */
 
-            if (Campo1 == usuarioRegistrado && Campo2 == contraseñaRegistrada)
+            MUsuario _usuario = await _ConexionLogin.Logearse(UsuarioLogin, ContraseñaLogin);
+
+            if (_usuario!=null)
             {
-                await Application.Current.MainPage.DisplayAlert("", "Inicio de sesión Exitoso", "ok");
+
+                await DisplayAlert("", "Inicio de sesión Exitoso", "ok");
+                _Logueo.Insertar(_usuario);
                 await Navigation.PushAsync(new MainPage());
             }
             else
             {
-                await Application.Current.MainPage.DisplayAlert("Error", "Usuario o contraseña incorrectos", "OK");
+                await DisplayAlert("Error", "Usuario o contraseña incorrectos", "OK");
             }
 
         }
@@ -83,5 +100,11 @@ namespace AirePuro.ViewModel
         {
             await Navigation.PushAsync(new Registrarte());
         }
+        #endregion
+
+        #region Comandos
+        public ICommand Iniciarcommand { get; private set; }
+        public ICommand Registrarcommand { get; private set; }
+        #endregion
     }
 }
