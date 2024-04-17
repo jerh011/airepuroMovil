@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\zProyecto\\si xd\\airepuroMovil\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|c:\\zproyecto\\si xd\\airepuromovil\\airepuro\\airepuro\\simulacion\\historialconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|solutionrelative:airepuro\\airepuro\\simulacion\\historialconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|c:\\zproyecto\\si xd\\airepuromovil\\airepuro\\airepuro\\viewmodel\\editarmodulo\\vmeditarventiladormodulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|solutionrelative:airepuro\\airepuro\\viewmodel\\editarmodulo\\vmeditarventiladormodulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|c:\\zproyecto\\si xd\\airepuromovil\\airepuro\\airepuro\\viewmodel\\vmregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|solutionrelative:airepuro\\airepuro\\viewmodel\\vmregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|c:\\zproyecto\\si xd\\airepuromovil\\airepuro\\airepuro\\viewmodel\\vmventiladores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|solutionrelative:airepuro\\airepuro\\viewmodel\\vmventiladores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|c:\\zproyecto\\si xd\\airepuromovil\\airepuro\\airepuro\\viewmodel\\vmregistrarsensores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|solutionrelative:airepuro\\airepuro\\viewmodel\\vmregistrarsensores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|c:\\zproyecto\\si xd\\airepuromovil\\airepuro\\airepuro\\views\\pantallasmenuhamburgesa\\registro.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
-      "RelativeMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|solutionrelative:airepuro\\airepuro\\views\\pantallasmenuhamburgesa\\registro.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+      "AbsoluteMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|c:\\zproyecto\\si xd\\airepuromovil\\airepuro\\airepuro\\simulacion\\ventiladoressim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3087505B-A7B4-48A5-A978-EAD9CC9F62C9}|AirePuro\\AirePuro\\AirePuro.csproj|solutionrelative:airepuro\\airepuro\\simulacion\\ventiladoressim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,56 +22,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "VMRegistrarSensores.cs",
-              "DocumentMoniker": "C:\\zProyecto\\si xd\\airepuroMovil\\AirePuro\\AirePuro\\ViewModel\\VMRegistrarSensores.cs",
-              "RelativeDocumentMoniker": "AirePuro\\AirePuro\\ViewModel\\VMRegistrarSensores.cs",
-              "ToolTip": "C:\\zProyecto\\si xd\\airepuroMovil\\AirePuro\\AirePuro\\ViewModel\\VMRegistrarSensores.cs",
-              "RelativeToolTip": "AirePuro\\AirePuro\\ViewModel\\VMRegistrarSensores.cs",
-              "ViewState": "AQIAAN0AAAAAAAAAAAAAAPYAAAALAAAA",
+              "Title": "Ventiladoressim.cs",
+              "DocumentMoniker": "C:\\zProyecto\\si xd\\airepuroMovil\\AirePuro\\AirePuro\\Simulacion\\Ventiladoressim.cs",
+              "RelativeDocumentMoniker": "AirePuro\\AirePuro\\Simulacion\\Ventiladoressim.cs",
+              "ToolTip": "C:\\zProyecto\\si xd\\airepuroMovil\\AirePuro\\AirePuro\\Simulacion\\Ventiladoressim.cs",
+              "RelativeToolTip": "AirePuro\\AirePuro\\Simulacion\\Ventiladoressim.cs",
+              "ViewState": "AQIAAF4AAAAAAAAAAAA0wG8AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T09:13:26.474Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HistorialConexion.cs",
-              "DocumentMoniker": "C:\\zProyecto\\si xd\\airepuroMovil\\AirePuro\\AirePuro\\Simulacion\\HistorialConexion.cs",
-              "RelativeDocumentMoniker": "AirePuro\\AirePuro\\Simulacion\\HistorialConexion.cs",
-              "ToolTip": "C:\\zProyecto\\si xd\\airepuroMovil\\AirePuro\\AirePuro\\Simulacion\\HistorialConexion.cs",
-              "RelativeToolTip": "AirePuro\\AirePuro\\Simulacion\\HistorialConexion.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAADgvzoAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T09:11:49.369Z",
+              "WhenOpened": "2024-04-17T10:47:48.466Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "VMRegistro.cs",
-              "DocumentMoniker": "C:\\zProyecto\\si xd\\airepuroMovil\\AirePuro\\AirePuro\\ViewModel\\VMRegistro.cs",
-              "RelativeDocumentMoniker": "AirePuro\\AirePuro\\ViewModel\\VMRegistro.cs",
-              "ToolTip": "C:\\zProyecto\\si xd\\airepuroMovil\\AirePuro\\AirePuro\\ViewModel\\VMRegistro.cs",
-              "RelativeToolTip": "AirePuro\\AirePuro\\ViewModel\\VMRegistro.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAAADwAAAAMAAAA",
+              "Title": "VMVentiladores.cs",
+              "DocumentMoniker": "C:\\zProyecto\\si xd\\airepuroMovil\\AirePuro\\AirePuro\\ViewModel\\VMVentiladores.cs",
+              "RelativeDocumentMoniker": "AirePuro\\AirePuro\\ViewModel\\VMVentiladores.cs",
+              "ToolTip": "C:\\zProyecto\\si xd\\airepuroMovil\\AirePuro\\AirePuro\\ViewModel\\VMVentiladores.cs",
+              "RelativeToolTip": "AirePuro\\AirePuro\\ViewModel\\VMVentiladores.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T09:08:57.52Z"
+              "WhenOpened": "2024-04-17T10:48:25.457Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Registro.xaml",
-              "DocumentMoniker": "C:\\zProyecto\\si xd\\airepuroMovil\\AirePuro\\AirePuro\\Views\\PantallasMenuHamburgesa\\Registro.xaml",
-              "RelativeDocumentMoniker": "AirePuro\\AirePuro\\Views\\PantallasMenuHamburgesa\\Registro.xaml",
-              "ToolTip": "C:\\zProyecto\\si xd\\airepuroMovil\\AirePuro\\AirePuro\\Views\\PantallasMenuHamburgesa\\Registro.xaml",
-              "RelativeToolTip": "AirePuro\\AirePuro\\Views\\PantallasMenuHamburgesa\\Registro.xaml",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAAEkAAABgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-17T08:57:31.713Z"
+              "DocumentIndex": 0,
+              "Title": "VMEditarVentiladorModulo.cs",
+              "DocumentMoniker": "C:\\zProyecto\\si xd\\airepuroMovil\\AirePuro\\AirePuro\\ViewModel\\EditarModulo\\VMEditarVentiladorModulo.cs",
+              "RelativeDocumentMoniker": "AirePuro\\AirePuro\\ViewModel\\EditarModulo\\VMEditarVentiladorModulo.cs",
+              "ToolTip": "C:\\zProyecto\\si xd\\airepuroMovil\\AirePuro\\AirePuro\\ViewModel\\EditarModulo\\VMEditarVentiladorModulo.cs",
+              "RelativeToolTip": "AirePuro\\AirePuro\\ViewModel\\EditarModulo\\VMEditarVentiladorModulo.cs",
+              "ViewState": "AQIAAMIAAAAAAAAAAAAYwNAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T10:47:42.22Z",
+              "EditorCaption": ""
             }
           ]
         }

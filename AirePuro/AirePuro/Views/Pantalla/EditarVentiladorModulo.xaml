@@ -130,10 +130,11 @@
             </Frame>
 
 
+            <Button  Text="Apagar" Command="{Binding Apagarcommand}"/>
 
-            <Button  Text="-"
-                         Command="{Binding EliminarModuloSensorcommand}"/>
+            <Button  Text="Prender" Command="{Binding Prendercommand}"/>
 
+            <Button  Text="-" Command="{Binding EliminarModuloSensorcommand}"/>
 
         </StackLayout>
     </Grid>

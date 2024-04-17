@@ -108,6 +108,20 @@ namespace AirePuro.Simulacion
                 return false;
             }
         }
+        public async Task<bool> ApagarVentilador(string id, bool encendido)
+        {
+
+            Uri RequestUri = new Uri(api_url + $"/EnsendidoVentilador/{id}/{encendido}");
+            var client = new HttpClient();
+
+            var response = await client.PutAsync(RequestUri, null);
+
+            if (response.IsSuccessStatusCode)
+                return true;
+            else
+                return false;
+
+        }
 
     }
 }

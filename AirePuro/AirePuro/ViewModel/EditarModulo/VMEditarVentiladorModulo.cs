@@ -11,6 +11,7 @@ using Xamarin.Forms;
 using AirePuro.Model.Listados;
 using AirePuro.Views.PantallasMenuHamburgesa;
 using AirePuro.Simulacion.Logueo;
+using AirePuro.Views.Pantalla;
 
 namespace AirePuro.ViewModel.EditarModulo
 {
@@ -186,16 +187,31 @@ namespace AirePuro.ViewModel.EditarModulo
                   
             Volver();
         }
+        public void PrenderVentilador()
+        {
+
+            _VENTILADORES.ApagarVentilador(ID, true);
+
+            Volver();
+        }
+        public void ApagarVentilador()
+        {
+
+            _VENTILADORES.ApagarVentilador(ID, false);
+
+            Volver();
+        }
 
         public async Task Volver()
         {
-            await Navigation.PushAsync(new Monitoreo());
+            await Navigation.PushAsync(new Ventiladores());
         }
         #endregion
 
-
         #region Comandos
         public ICommand EditarModuloSensorcommand => new Command(() => Editar());
+        public ICommand Prendercommand => new Command(() => PrenderVentilador());
+        public ICommand Apagarcommand => new Command(() => ApagarVentilador());
         public ICommand EliminarModuloSensorcommand => new Command(() => EliminarAsync());
 
         #endregion
