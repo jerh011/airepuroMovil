@@ -49,10 +49,10 @@ namespace AirePuro.ViewModel
 
         public async Task ListarVentiladores()
         {
-            
+
             string idUsuario = await _Logueo.OpteneteUsuari();
 
-            Lista =await  _VENTILADORES.ObtenerAreglo(idUsuario);
+            Lista = await _VENTILADORES.ObtenerAreglo(idUsuario);
         }
         public async Task IraEditar(MVentilador _modulo)
         {

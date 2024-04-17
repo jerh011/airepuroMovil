@@ -18,7 +18,7 @@ namespace AirePuro.Simulacion
         private List<MVentilador> listaVenti = new List<MVentilador>();
       
         private static Ventiladoressim _instanciaVentiladior;
-        private string api_url = "https://1p9p726s-5031.usw3.devtunnels.ms/api/Ventilador";
+        private string api_url = "https://rklkgjd6-5031.usw3.devtunnels.ms/api/Ventilador";
         static HttpClient client = new HttpClient();
         public static Ventiladoressim Instancia
         {

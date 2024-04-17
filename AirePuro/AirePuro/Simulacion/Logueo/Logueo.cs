@@ -13,8 +13,7 @@ namespace AirePuro.Simulacion.Logueo
         private MUsuario _Usuario = new MUsuario();
       
         private static Logueo _instanciaLogin;
-        private string api_url = "https://1p9p726s-5031.usw3.devtunnels.ms/api/Ventilador";
-        static HttpClient client = new HttpClient();
+
         public static Logueo Instancia
         {
             get

@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AirePuro.Views.PantallasMenuHamburgesa.Historial1">
+             x:Class="AirePuro.Views.PantallasMenuHamburgesa.Historial1"
+             Title="Historial">
     <StackLayout BackgroundColor="#E6F7FF">
         <!--Aqui la vista de los registros -->
         <Grid Margin="7" >
@@ -12,17 +13,20 @@
                      BorderColor="#ADF7B6"
                      BackgroundColor="#FFC09F">
                 <StackLayout Margin="0,30,0,0">
-                    <Label Text="Ubicacion: Sala" HorizontalOptions="Center" VerticalOptions="Start" FontAttributes="Bold,Italic" FontSize="20"/>
+                    <Label Text="Ubicacion:" HorizontalOptions="Center" VerticalOptions="Start" FontAttributes="Bold,Italic" FontSize="20"/>
+                    <Label Text="{Binding Lista.SensorTemperatura.ubicacion}" HorizontalOptions="Center" VerticalOptions="Start" FontAttributes="Bold,Italic" FontSize="20"/>
+                    
+                    <Label Text="Fecha y hora:" HorizontalOptions="Center" VerticalOptions="Start" FontAttributes="Bold,Italic" FontSize="20"/>
+                    <Label Text="{Binding Lista.Fecha}" HorizontalOptions="Center" VerticalOptions="Start" FontAttributes="Bold,Italic" FontSize="20"/>
 
-                    <Label Text="Fecha y hora: 20/02/2024 13:00" HorizontalOptions="Center" VerticalOptions="Start" FontAttributes="Bold,Italic" FontSize="20"/>
+                    
+                    <Label Text="Temperatura:°" HorizontalOptions="Center" VerticalOptions="Start" FontAttributes="Bold,Italic" FontSize="20"/>
+                    <Label Text="{Binding Lista.SensorTemperatura.temperatura}" HorizontalOptions="Center" VerticalOptions="Start" FontAttributes="Bold,Italic" FontSize="20"/>
 
-                    <Label Text="Temperatura: 25°" HorizontalOptions="Center" VerticalOptions="Start" FontAttributes="Bold,Italic" FontSize="20"/>
-
-                    <Label Text="Gas detectado: Oxigeno" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold,Italic" FontSize="20"/>
-
-                    <Label Text="Gas detectado: No" HorizontalOptions="Center" VerticalOptions="End" FontAttributes="Bold,Italic" FontSize="20"/>
-
-                    <Label Text="RPM: 30" HorizontalOptions="Center" VerticalOptions="End" FontAttributes="Bold,Italic" FontSize="20"/>
+                    
+                    <Label Text="RPM:" HorizontalOptions="Center" VerticalOptions="End" FontAttributes="Bold,Italic" FontSize="20"/>
+                    <Label Text="{Binding Lista.Ventilador.rpm}" HorizontalOptions="Center" VerticalOptions="End" FontAttributes="Bold,Italic" FontSize="20"/>
+                    
                 </StackLayout>
             </Frame>
 

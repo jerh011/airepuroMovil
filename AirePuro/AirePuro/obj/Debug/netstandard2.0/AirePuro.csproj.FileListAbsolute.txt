@@ -97,7 +97,6 @@ C:\zProyecto\si xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\View
 C:\zProyecto\si xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\Views\PantallasMenuHamburgesa\configuracion.xaml.g.cs
 C:\zProyecto\si xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\Views\PantallasMenuHamburgesa\configuracionSensores.xaml.g.cs
 C:\zProyecto\si xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\Views\PantallasMenuHamburgesa\Historial1.xaml.g.cs
-C:\zProyecto\si xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\Views\PantallasMenuHamburgesa\Historial2.xaml.g.cs
 C:\zProyecto\si xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\Views\PantallasMenuHamburgesa\Monitoreo.xaml.g.cs
 C:\zProyecto\si xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\Views\PantallasMenuHamburgesa\Registro.xaml.g.cs
 C:\zProyecto\si xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\Views\Pantalla\EditarTemperaturaModulo.xaml.g.cs

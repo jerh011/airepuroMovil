@@ -1,4 +1,5 @@
-﻿using AirePuro.ViewModel;
+﻿using AirePuro.Model;
+using AirePuro.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +14,10 @@ namespace AirePuro.Views.PantallasMenuHamburgesa
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Historial1 : ContentPage
     {
-        public Historial1()
+        public Historial1(MHistorial historial)
         {
             InitializeComponent();
-            BindingContext = new VMhistorial(Navigation);
+            BindingContext = new VMhistorial(Navigation,historial);
 
         }
     }

@@ -2005,7 +2005,6 @@ C:\zProyecto\si xd\airepuroMovil\AirePuro\AirePuro.Android\obj\Debug\130\lp\98\j
 C:\zProyecto\si xd\airepuroMovil\AirePuro\AirePuro.Android\obj\Debug\130\lp\103\jl\files.cache
 C:\zProyecto\si xd\airepuroMovil\AirePuro\AirePuro.Android\obj\Debug\130\R.cs.flag
 C:\zProyecto\si xd\airepuroMovil\AirePuro\AirePuro.Android\obj\Debug\130\AirePuro.Android.csproj.CoreCompileInputs.cache
-C:\zProyecto\si xd\airepuroMovil\AirePuro\AirePuro.Android\obj\Debug\130\AirePuro.Android.csproj.CopyComplete
 C:\zProyecto\si xd\airepuroMovil\AirePuro\AirePuro.Android\obj\Debug\130\AirePuro.Android.dll
 C:\zProyecto\si xd\airepuroMovil\AirePuro\AirePuro.Android\obj\Debug\130\AirePuro.Android.pdb
 C:\zProyecto\si xd\airepuroMovil\AirePuro\AirePuro.Android\obj\Debug\130\android\bin\com.companyname.airepuro.apk
@@ -2618,3 +2617,4 @@ C:\zProyecto\si xd\airepuroMovil\AirePuro\AirePuro.Android\obj\Debug\130\stamp\_
 C:\zProyecto\si xd\airepuroMovil\AirePuro\AirePuro.Android\obj\Debug\130\stamp\_GenerateJavaStubs.stamp
 C:\zProyecto\si xd\airepuroMovil\AirePuro\AirePuro.Android\obj\Debug\130\stamp\_GeneratePackageManagerJava.stamp
 C:\zProyecto\si xd\airepuroMovil\AirePuro\AirePuro.Android\obj\Debug\130\stamp\_ResolveLibraryProjectImports.stamp
+C:\zProyecto\si xd\airepuroMovil\AirePuro\AirePuro.Android\obj\Debug\130\AirePuro.E7216F78.Up2Date

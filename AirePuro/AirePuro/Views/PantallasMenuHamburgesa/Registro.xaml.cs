@@ -1,4 +1,5 @@
-﻿using AirePuro.ViewModel;
+﻿using AirePuro.Model;
+using AirePuro.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace AirePuro.Views.PantallasMenuHamburgesa
         {
             InitializeComponent();
             NavigationPage.SetHasBackButton(this, false);
-            BindingContext = new VMhistorial(Navigation);
+            BindingContext = new VMRegistro(Navigation);
         }
 
     }
