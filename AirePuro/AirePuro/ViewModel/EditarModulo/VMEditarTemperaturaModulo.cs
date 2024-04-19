@@ -11,6 +11,8 @@ using Xamarin.Forms;
 using AirePuro.Model.Listados;
 using AirePuro.Views.PantallasMenuHamburgesa;
 using AirePuro.Simulacion.Logueo;
+using Microcharts;
+using SkiaSharp;
 
 namespace AirePuro.ViewModel.EditarModulo
 {
@@ -31,7 +33,8 @@ namespace AirePuro.ViewModel.EditarModulo
 
         private DPikerListado _selectedSensor = new DPikerListado();
         private PindatosTemp _selectedPindatosTemp = new PindatosTemp();
-
+        private Chart _grafica;
+        private Chart _grafica2;
 
         //BORRAR de apartir de aqui despues del lunes o no 
         private SenTepsim _Sentemperatura = SenTepsim.Instancia;
@@ -55,7 +58,8 @@ namespace AirePuro.ViewModel.EditarModulo
             SelectedSensor = _ListaSensores.FirstOrDefault(s => s.Value == "Temperatura");
 
             _PindatosTemp = GetPinesDatosTemp();
-
+            Graficas();
+            Graficas2();
             Task.Run(async () =>
             {
                 string idUsuario = await _Logueo.OpteneteUsuari();
@@ -104,8 +108,17 @@ namespace AirePuro.ViewModel.EditarModulo
             get { return _selectedPindatosTemp; }
             set { SetValue(ref _selectedPindatosTemp, value); }
         }
+        public Chart Grafica
+        {
+            get { return _grafica; }
+            set { _grafica = value; }
+        }
+        public Chart Grafica2
+        {
+            get { return _grafica2; }
+            set { _grafica2 = value; }
+        }
 
-       
         #endregion
 
         #region pruebas 
@@ -148,6 +161,51 @@ namespace AirePuro.ViewModel.EditarModulo
             _Sentemperatura.Actualizardatos(temperatura);
                   
             Volver();
+        }
+        public async Task Graficas()
+        {
+            // Crear una instancia de RadialGaugeChart en lugar de Chart
+
+            Grafica = new RadialGaugeChart
+            {
+                // Crear una lista de ChartEntry en lugar de un solo ChartEntry
+                Entries = new[]
+                {
+                   new ChartEntry(Convert.ToInt32(Humedad))
+                    {
+                        Color = SKColor.Parse("#00003d"), // Color rojo para porcentaje mayor a 70
+                    
+                    },
+                },
+                MinValue = 0,
+                MaxValue = 100,
+                BackgroundColor = SKColor.Parse("#00FFFFFF"),
+                Margin = 0,
+
+            };
+        }
+        public async Task Graficas2()
+        {
+            // Crear una instancia de RadialGaugeChart en lugar de Chart
+
+            Grafica2 = new RadialGaugeChart
+            {
+                // Crear una lista de ChartEntry en lugar de un solo ChartEntry
+                Entries = new[]
+                {
+                 
+                    new ChartEntry(Convert.ToInt32(Temperatura))
+                    {
+                        Color = SKColor.Parse("ff0000"),
+                    
+                    },
+                },
+                MinValue = 0,
+                MaxValue = 50,
+                BackgroundColor = SKColor.Parse("#00FFFFFF"),
+                Margin = 0,
+
+            };
         }
         public async Task EliminarAsync()
         {

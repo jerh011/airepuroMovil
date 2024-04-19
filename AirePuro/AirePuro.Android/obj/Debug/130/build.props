@@ -25,11 +25,11 @@ androidgeneratejnimarshalmethods=false
 os=windows_nt
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
-_nugetassetstimestamp=638489137823734823
+_nugetassetstimestamp=638490858937013203
 typemapkind=strings-asm
 androidsupportedabis=arm64-v8a
 armeabi-v7a
 x86
 x86_64
 androidmanifestplaceholders=
-projectfullpath=c:\zproyecto\si xd\airepuromovil\airepuro\airepuro.android\airepuro.android.csproj
+projectfullpath=c:\users\jesus\desktop\xd\airepuromovil\airepuro\airepuro.android\airepuro.android.csproj

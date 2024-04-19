@@ -2,8 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AirePuro.Views.Pantalla.Ventiladores"
-             Title="Ventiladores">
+             xmlns:charts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             Title="Ventiladores"
+             BackgroundColor="#E6F7FF">
     <StackLayout>
+             
+
         <ScrollView>
             <Grid RowDefinitions="0,*" Padding="0,0,0,140">
 

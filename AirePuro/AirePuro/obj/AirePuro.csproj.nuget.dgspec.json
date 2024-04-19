@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\zProyecto\\si xd\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj": {}
+    "C:\\Users\\Jesus\\Desktop\\xd\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj": {}
   },
   "projects": {
-    "C:\\zProyecto\\si xd\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj": {
+    "C:\\Users\\Jesus\\Desktop\\xd\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\zProyecto\\si xd\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj",
+        "projectUniqueName": "C:\\Users\\Jesus\\Desktop\\xd\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj",
         "projectName": "AirePuro",
-        "projectPath": "C:\\zProyecto\\si xd\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj",
+        "projectPath": "C:\\Users\\Jesus\\Desktop\\xd\\airepuroMovil\\AirePuro\\AirePuro\\AirePuro.csproj",
         "packagesPath": "C:\\Users\\Jesus\\.nuget\\packages\\",
-        "outputPath": "C:\\zProyecto\\si xd\\airepuroMovil\\AirePuro\\AirePuro\\obj\\",
+        "outputPath": "C:\\Users\\Jesus\\Desktop\\xd\\airepuroMovil\\AirePuro\\AirePuro\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,14 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
+            "Microcharts": {
+              "target": "Package",
+              "version": "[0.9.5.9, )"
+            },
+            "Microcharts.Forms": {
+              "target": "Package",
+              "version": "[0.9.5.9, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

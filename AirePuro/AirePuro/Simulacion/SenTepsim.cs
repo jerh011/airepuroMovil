@@ -16,7 +16,7 @@ namespace AirePuro.Simulacion
         private static SenTepsim _instanciaAtreglo;
         private static Ventiladoressim _instanciaVentiladior;
 
-        private string api_url = "https://rklkgjd6-5031.usw3.devtunnels.ms/api/SensorTemperatura";
+        private string api_url = "http://www.apiaire.somee.com/api/SensorTemperatura";
         static HttpClient client = new HttpClient();
         int Cont=-1;
         public static SenTepsim Instancia

@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:charts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
              x:Class="AirePuro.Views.Pantalla.EditarVentiladorModulo"
              Title="Editar Ventilador">
 
@@ -8,14 +9,17 @@
           BackgroundColor="#1d1d1d">
 
 
-        <StackLayout Grid.Row="1" Margin="10">
+        <StackLayout Margin="10" >
+            <Label Text="RPM" TextColor="White" FontSize="40" FontAttributes="Bold" Margin="0" TranslationX="185" TranslationY="12"/>
+            <charts:ChartView Chart="{Binding Grafica}" HeightRequest="300" WidthRequest="800" Rotation="600" TranslationX="10" TranslationY="-45"/>
+            <Label Text="{Binding RPM}" TextColor="White" TranslationX="185" TranslationY="-235" FontAttributes="Bold" VerticalOptions="Center" FontSize="40"/>
+        </StackLayout>
+  
+        
+        <StackLayout Grid.Row="1" Margin="20,190,10,10">
             <!--ID-->
             <StackLayout Orientation="Horizontal">
-                <Label Text="ID: "
-                       TextColor="White" 
-                       FontAttributes="Bold"
-                       VerticalOptions="Center"
-                       FontSize="18"/>
+              
 
                 <Entry Placeholder="ID" 
                        FontAttributes="Bold" 
@@ -25,6 +29,7 @@
                        HorizontalOptions="StartAndExpand"
                        Text="{Binding ID}"
                        IsEnabled="False"
+                       IsVisible="False"
                        />
             </StackLayout>
 
@@ -137,6 +142,9 @@
             <Button  Text="-" Command="{Binding EliminarModuloSensorcommand}"/>
 
         </StackLayout>
+     
     </Grid>
-
+    
+   
+    
 </ContentPage>

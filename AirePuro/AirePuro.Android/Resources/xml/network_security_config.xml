@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <network-security-config>
 	<domain-config cleartextTrafficPermitted="true">
-		<domain includeSubdomains="true">rklkgjd6-5031.usw3.devtunnels.ms/</domain>
-		<domain includeSubdomains="true">rklkgjd6-5031.usw3.devtunnels.ms</domain>
-		<domain includeSubdomains="true">https://rklkgjd6-5031.usw3.devtunnels.ms/</domain>
-		<domain includeSubdomains="true">https://rklkgjd6-5031.usw3.devtunnels.ms</domain>
+		<domain includeSubdomains="true">apiaire.somee.com/</domain>
+		<domain includeSubdomains="true">apiaire.somee.com</domain>
+		<domain includeSubdomains="true">http://www.apiaire.somee.com/</domain>
+		<domain includeSubdomains="true">http://www.apiaire.somee.com</domain>
 		<domain includeSubdomains="true">www.localhost:3000</domain>
 	</domain-config>
 </network-security-config>

@@ -25,6 +25,7 @@ namespace AirePuro.Views.Pantalla
         private async void Listaventiladores_Appearing(object sender, EventArgs e)
         {
             await vM.ListarVentiladores();
+   
         }
 
     }

@@ -11,10 +11,12 @@ namespace AirePuro
         public static MasterDetailPage MasterDet { get; set; }
         public App()
         {
+          
+
             InitializeComponent();
 
             MainPage = new NavigationPage(new Login());
-            //MainPage = new NavigationPage(new RegistrarSensores());
+            //MainPage = new NavigationPage(new Ventiladores());
         }
 
         protected override void OnStart()

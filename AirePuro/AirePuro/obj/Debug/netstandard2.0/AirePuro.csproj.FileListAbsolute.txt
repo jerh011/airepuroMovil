@@ -119,3 +119,33 @@ C:\zProyecto\si xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\Xaml
 C:\zProyecto\si xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\AirePuro.dll
 C:\zProyecto\si xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\refint\AirePuro.dll
 C:\zProyecto\si xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\AirePuro.pdb
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\bin\Debug\netstandard2.0\AirePuro.deps.json
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\bin\Debug\netstandard2.0\AirePuro.dll
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\bin\Debug\netstandard2.0\ref\AirePuro.dll
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\bin\Debug\netstandard2.0\AirePuro.pdb
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\AirePuro.csproj.AssemblyReference.cache
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\AirePuro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\Views\Nav.xaml.g.cs
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\Views\PantallasMenuHamburgesa\configuracion.xaml.g.cs
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\Views\PantallasMenuHamburgesa\configuracionSensores.xaml.g.cs
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\Views\PantallasMenuHamburgesa\Historial1.xaml.g.cs
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\Views\PantallasMenuHamburgesa\Monitoreo.xaml.g.cs
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\Views\PantallasMenuHamburgesa\Registro.xaml.g.cs
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\Views\Pantalla\EditarTemperaturaModulo.xaml.g.cs
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\Views\Pantalla\EditarVentiladorModulo.xaml.g.cs
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\Views\Pantalla\Login.xaml.g.cs
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\Views\Pantalla\RegistrarSensores.xaml.g.cs
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\Views\Pantalla\Registrarte.xaml.g.cs
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\Views\Pantalla\SenGaz.xaml.g.cs
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\Views\Pantalla\SenosorTemp.xaml.g.cs
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\Views\Pantalla\Ventiladores.xaml.g.cs
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\AirePuro.AssemblyInfoInputs.cache
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\AirePuro.AssemblyInfo.cs
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\AirePuro.csproj.CoreCompileInputs.cache
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\AirePuro.sourcelink.json
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\AirePuro.dll
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\refint\AirePuro.dll
+C:\Users\Jesus\Desktop\xd\airepuroMovil\AirePuro\AirePuro\obj\Debug\netstandard2.0\AirePuro.pdb

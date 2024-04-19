@@ -12,6 +12,8 @@ using AirePuro.Model.Listados;
 using AirePuro.Views.PantallasMenuHamburgesa;
 using AirePuro.Simulacion.Logueo;
 using AirePuro.Views.Pantalla;
+using Microcharts;
+using SkiaSharp;
 
 namespace AirePuro.ViewModel.EditarModulo
 {
@@ -23,10 +25,12 @@ namespace AirePuro.ViewModel.EditarModulo
         public List<PinesRPM> _PinesRPM { get; set; }
         public List<MVentilador> listaVenti;
 
+        private Chart _grafica;
 
 
         public string _ElimnacionComponente;
         public string _ID;
+        public int _RPM;
         public string _Habitacion;
         public string _PinRPM;
         public string _PinEncendido;
@@ -54,14 +58,14 @@ namespace AirePuro.ViewModel.EditarModulo
             _PinesRPM = GetPinesRPM();
             ID = _Modulo.id;
             Habitacion = _Modulo.ubicacion;
-
+            RPM = _Modulo.rpm;
             PinRPM = _PinesRPM.FirstOrDefault(s => s.pinRPM == _Modulo.pinRPM)?.pinRPM;
             PinEncendido = _PinesEncendido.FirstOrDefault(s => s.pinEnsendido == _Modulo.pinEnsendido)?.pinEnsendido;
             SelectedSensor = _ListaSensores.FirstOrDefault(s => s.Value == "Ventilador");
 
             _ElimnacionComponente = "Ventilador";
 
-           
+            Graficas();
             Task.Run(async () =>
             {
                 string idUsuario = await _Logueo.OpteneteUsuari();
@@ -80,6 +84,11 @@ namespace AirePuro.ViewModel.EditarModulo
         {
             get { return _ID; }
             set { SetValue(ref _ID, value); }
+        }
+        public int RPM
+        {
+            get { return _RPM; }
+            set { SetValue(ref _RPM, value); }
         }
         public string Habitacion
         {
@@ -114,9 +123,34 @@ namespace AirePuro.ViewModel.EditarModulo
             get { return _selectedEncendido; }
             set { SetValue(ref _selectedEncendido, value); }
         }
+        public Chart Grafica
+        {
+            get { return _grafica; }
+            set { _grafica = value; }
+        }
         #endregion
+        #region Procesos
+        public async Task Graficas()
+        {
+            // Crear una instancia de RadialGaugeChart en lugar de Chart
 
-        #region pruebas 
+            Grafica = new RadialGaugeChart
+            {
+                // Crear una lista de ChartEntry en lugar de un solo ChartEntry
+                Entries = new[]
+                {
+                    new ChartEntry(RPM)
+                    {
+                        Color = SKColor.Parse("#ff0000"), // Color rojo para porcentaje mayor a 70
+                    },
+                },
+                MinValue = 0,
+                MaxValue = 1800,
+                BackgroundColor = SKColor.Parse("#00FFFFFF"),
+                Margin = 0,
+
+            };
+        }
         public List<DPikerListado> GetLista()
         {
             var lista = new List<DPikerListado>()

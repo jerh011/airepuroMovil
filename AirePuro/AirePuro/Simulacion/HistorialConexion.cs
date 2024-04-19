@@ -16,7 +16,7 @@ namespace AirePuro.Simulacion
         private static HistorialConexion _instanciaAtreglo;
      
 
-        private string api_url = "https://rklkgjd6-5031.usw3.devtunnels.ms/api/Vhistorial";
+        private string api_url = "http://www.apiaire.somee.com/api/Vhistorial";
         static HttpClient client = new HttpClient();
         int Cont=-1;
         public static HistorialConexion Instancia

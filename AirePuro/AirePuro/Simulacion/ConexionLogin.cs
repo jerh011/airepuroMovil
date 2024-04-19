@@ -12,7 +12,7 @@ namespace AirePuro.Simulacion
 {
     public class ConexionLogin
     {
-        private string api_url = "https://rklkgjd6-5031.usw3.devtunnels.ms/api/Usuario";
+        private string api_url = "http://www.apiaire.somee.com/api/Usuario";
         static HttpClient client = new HttpClient();
         private string valido;
         private bool resultado;
